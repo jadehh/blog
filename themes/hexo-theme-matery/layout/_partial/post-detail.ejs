@@ -60,6 +60,7 @@
                     <%= min2read(page.content) %> <%= __('Minutes') %>
                 </div>
                 <% } %>
+
                 <% if (theme.postInfo.readCount && theme.busuanziStatistics && theme.busuanziStatistics.enable) { %>
                     <div id="busuanzi_container_page_pv" class="info-break-policy">
                         <i class="far fa-eye fa-fw"></i><%- __('readCount') %>:&nbsp;&nbsp;
@@ -70,16 +71,12 @@
         </div>
         <hr class="clearfix">
 
-        <% if (config.prismjs && config.prismjs.enable) { %>
-        <!-- 是否加载使用自带的 prismjs. -->
         <link rel="stylesheet" href="<%- theme.jsDelivr.url %><%- url_for(theme.libs.css.prism) %>">
-        <% } %>
-
-        <% if (theme.code.break) { %>
         <!-- 代码块折行 -->
-        <style type="text/css">
-            code[class*="language-"], pre[class*="language-"] { white-space: pre-wrap !important; }
-        </style>
+        <% if (theme.code.break) { %>
+            <style type="text/css">
+                code[class*="language-"], pre[class*="language-"] { white-space: pre-wrap !important; }
+            </style>
         <% } %>
 
         <div class="card-content article-card-content">
@@ -181,16 +178,12 @@
         <%- partial('_partial/valine') %>
     <% } %>
 
-    <% if (theme.waline && theme.waline.enable) { %>
-        <%- partial('_partial/waline') %>
+    <% if (theme.minivaline && theme.minivaline.enable) { %>
+        <%- partial('_partial/minivaline') %>
     <% } %>
 
     <% if (theme.changyan && theme.changyan.enable) { %>
         <%- partial('_partial/changyan') %>
-    <% } %>
-
-    <% if (theme.twikoo && theme.twikoo.enable) { %>
-        <%- partial('_partial/twikoo') %>
     <% } %>
 
     <%- partial('_partial/prev-next') %>
@@ -218,7 +211,7 @@
 
         // we need a <pre> tag workaround.
         // otherwise the text inside "pre" loses all the line breaks!
-        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE' || selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
             newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
         }
 
@@ -235,4 +228,20 @@
 </script>
 <% } %>
 
-<%- partial('_partial/codeblock') %>
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="<%- theme.jsDelivr.url %><%- url_for('/libs/codeBlock/codeBlockFuction.js') %>"></script>
+
+<!-- 代码语言 -->
+<% if (theme.code.lang) { %>
+<script type="text/javascript" src="<%- theme.jsDelivr.url %><%- url_for('/libs/codeBlock/codeLang.js') %>"></script>
+<% } %>
+
+<!-- 代码块复制 -->
+<% if (theme.code.copy) { %>
+<script type="text/javascript" src="<%- theme.jsDelivr.url %><%- url_for('/libs/codeBlock/codeCopy.js') %>"></script>
+<% } %>
+
+<!-- 代码块收缩 -->
+<% if (theme.code.shrink) { %>
+<script type="text/javascript" src="<%- theme.jsDelivr.url %><%- url_for('/libs/codeBlock/codeShrink.js') %>"></script>
+<% } %>
