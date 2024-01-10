@@ -574,14 +574,17 @@ sudo systemctl restart docker
 <blockquote>
 <p>可以省略，可以通过算法配置界面导入镜像</p>
 </blockquote>
-<h2 id="7-加密狗"><a href="#7-加密狗" class="headerlink" title="7 加密狗"></a>7 加密狗</h2><h3 id="7-1-安装加密狗驱动"><a href="#7-1-安装加密狗驱动" class="headerlink" title="7.1 安装加密狗驱动"></a>7.1 安装加密狗驱动</h3><pre><code class="bash">wget https://gh.ddlc.top/https://github.com/jadehh/pythonTools/releases/download/JadeV1.9.7/aksusbd_8.51-1_amd64.deb
+<h2 id="7-加密狗"><a href="#7-加密狗" class="headerlink" title="7 加密狗"></a>7 加密狗</h2><h3 id="7-1-安装加密狗驱动"><a href="#7-1-安装加密狗驱动" class="headerlink" title="7.1 安装加密狗驱动"></a>7.1 安装加密狗驱动</h3><pre><code class="bash">wget \
+https://gh.ddlc.top/https://github.com/jadehh/pythonTools/releases/download/JadeV1.9.7/aksusbd_8.51-1_amd64.deb
 sudo dpkg -i aksusbd_8.51-1_amd64.deb &amp;&amp; rm aksusbd_8.51-1_amd64.deb
 </code></pre>
-<h3 id="7-2-安装加密狗配置文件"><a href="#7-2-安装加密狗配置文件" class="headerlink" title="7.2 安装加密狗配置文件"></a>7.2 安装加密狗配置文件</h3><pre><code class="bash">wget https://gh.ddlc.top/https://github.com/jadehh/pythonTools/releases/download/JadeV1.9.7/hasplm.ini
+<h3 id="7-2-安装加密狗配置文件"><a href="#7-2-安装加密狗配置文件" class="headerlink" title="7.2 安装加密狗配置文件"></a>7.2 安装加密狗配置文件</h3><pre><code class="bash">wget \
+https://gh.ddlc.top/https://github.com/jadehh/pythonTools/releases/download/JadeV1.9.7/hasplm.ini
 sudo cp hasplm.ini /etc/hasplm/ &amp;&amp; rm hasplm.ini
 sudo service hasplmd restart
 </code></pre>
-<h2 id="8-安装谷歌浏览器"><a href="#8-安装谷歌浏览器" class="headerlink" title="8. 安装谷歌浏览器"></a>8. 安装谷歌浏览器</h2><pre><code class="bash">wget https://gh.ddlc.top/https://github.com/jadehh/pythonTools/releases/download/JadeV1.9.7/google-chrome-stable_current_amd64.deb
+<h2 id="8-安装谷歌浏览器"><a href="#8-安装谷歌浏览器" class="headerlink" title="8. 安装谷歌浏览器"></a>8. 安装谷歌浏览器</h2><pre><code class="bash">wget \
+https://gh.ddlc.top/https://github.com/jadehh/pythonTools/releases/download/JadeV1.9.7/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb &amp;&amp; rm google-chrome-stable_current_amd64.deb
 </code></pre>
 
