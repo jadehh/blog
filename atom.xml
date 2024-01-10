@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>🐘 简伯</title>
+  
+  <subtitle>简伯</subtitle>
+  <link href="https://jadehh.github.io/blog/atom.xml" rel="self"/>
+  
+  <link href="https://jadehh.github.io/blog/"/>
+  <updated>2024-01-10T05:31:03.655Z</updated>
+  <id>https://jadehh.github.io/blog/</id>
+  
+  <author>
+    <name>简得辉</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>服务器配置清单</title>
+    <link href="https://jadehh.github.io/blog/article/20240109093535.html"/>
+    <id>https://jadehh.github.io/blog/article/20240109093535.html</id>
+    <published>2024-01-10T05:31:03.655Z</published>
+    <updated>2024-01-10T05:31:03.655Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;服务器配置清单&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;类型&lt;/th&gt;
+&lt;th&gt;CPU&lt;/th&gt;
+&lt;th&gt;内存&lt;/th&gt;
+&lt;th&gt;硬盘&lt;/th&gt;
+&lt;th&gt;显卡&lt;/th&gt;
+&lt;th&gt;操作系统&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;t</summary>
+        
+      
+    
+    
+    
+    <category term="设备文档" scheme="https://jadehh.github.io/blog/categories/%E8%AE%BE%E5%A4%87%E6%96%87%E6%A1%A3/"/>
+    
+    
+    <category term="设备文档" scheme="https://jadehh.github.io/blog/tags/%E8%AE%BE%E5%A4%87%E6%96%87%E6%A1%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>流媒体服务Api文档</title>
+    <link href="https://jadehh.github.io/blog/article/20240109143105.html"/>
+    <id>https://jadehh.github.io/blog/article/20240109143105.html</id>
+    <published>2024-01-10T05:31:03.655Z</published>
+    <updated>2024-01-10T05:31:03.655Z</updated>
+    
+    
+    
+    
+    <category term="项目文档" scheme="https://jadehh.github.io/blog/categories/%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/"/>
+    
+    
+    <category term="项目文档" scheme="https://jadehh.github.io/blog/tags/%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>服务器操作系统安装</title>
+    <link href="https://jadehh.github.io/blog/article/20240109145326.html"/>
+    <id>https://jadehh.github.io/blog/article/20240109145326.html</id>
+    <published>2024-01-10T05:31:03.643Z</published>
+    <updated>2024-01-10T05:31:03.643Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;服务器操作系统安装&lt;/p&gt;
+&lt;h2 id=&quot;1-启动盘制作&quot;&gt;&lt;a href=&quot;#1-启动盘制作&quot; class=&quot;headerlink&quot; title=&quot;1. 启动盘制作&quot;&gt;&lt;/a&gt;1.</summary>
+        
+      
+    
+    
+    
+    <category term="设备文档" scheme="https://jadehh.github.io/blog/categories/%E8%AE%BE%E5%A4%87%E6%96%87%E6%A1%A3/"/>
+    
+    
+    <category term="设备文档" scheme="https://jadehh.github.io/blog/tags/%E8%AE%BE%E5%A4%87%E6%96%87%E6%A1%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>华为小站配置文档</title>
+    <link href="https://jadehh.github.io/blog/article/20240108164645.html"/>
+    <id>https://jadehh.github.io/blog/article/20240108164645.html</id>
+    <published>2024-01-10T05:31:03.635Z</published>
+    <updated>2024-01-10T05:31:03.635Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;华为小站配置&lt;/p&gt;
+&lt;h1 id=&quot;配置华为小站&quot;&gt;&lt;a href=&quot;#配置华为小站&quot; class=&quot;headerlink&quot; title=&quot;配置华为小站&quot;&gt;&lt;/a&gt;配置华为小站&lt;/h1&gt;&lt;h2 id=&quot;1-登录管理系统&quot;&gt;&lt;a href=&quot;#1-登录管理系统&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="设备文档" scheme="https://jadehh.github.io/blog/categories/%E8%AE%BE%E5%A4%87%E6%96%87%E6%A1%A3/"/>
+    
+    
+    <category term="设备文档" scheme="https://jadehh.github.io/blog/tags/%E8%AE%BE%E5%A4%87%E6%96%87%E6%A1%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Sarah小站首页</title>
+    <link href="https://jadehh.github.io/blog/article/453215639.html"/>
+    <id>https://jadehh.github.io/blog/article/453215639.html</id>
+    <published>2023-12-31T19:08:07.000Z</published>
+    <updated>2024-01-10T05:31:03.635Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;欢迎来到Sarah小站&lt;/p&gt;
+&lt;p&gt;姓名： Sarah&lt;/p&gt;
+&lt;p&gt;职业：</summary>
+        
+      
+    
+    
+    
+    <category term="Sarah小站" scheme="https://jadehh.github.io/blog/categories/Sarah%E5%B0%8F%E7%AB%99/"/>
+    
+    
+    <category term="Sarah" scheme="https://jadehh.github.io/blog/tags/Sarah/"/>
+    
+  </entry>
+  
+</feed>
