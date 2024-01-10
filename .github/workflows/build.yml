@@ -8,7 +8,7 @@ on:
 jobs:
   release:
     name: Build Website
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       # 检出 Git 仓库
       - name: Check out git repository
@@ -27,7 +27,7 @@ jobs:
           npm install
       # 构建程序
       - name: Build Website
-        run: node_modules/bin/hexo deploy
+        run: hexo deploy
         env:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 
