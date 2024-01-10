@@ -23,7 +23,9 @@ jobs:
           node-version: "18.x"
       # 安装项目依赖
       - name: Install Dependencies
-        run: npm install
+        run: | 
+          npm install
+          npm install hexo
       # 构建程序
       - name: Build Website
         run: hexo deploy
