@@ -26,20 +26,14 @@ jobs:
         run: | 
           npm install
           npm i hexo -g
-      - name: deploy
-        run: |
-          git config --global user.email "jadehh@live.com"
-          git config --global user.name "jadehh"
-          hexo deploy
-        
 
-      # Deploy hexo blog website.
-#      - name: Deploy
-#        id: deploy
-#        uses: sma11black/hexo-action@v1.0.3
-#        with:
-#          deploy_key: ${{ secrets.DEPLOY_KEY }}
-#          user_name: jadehh  # (or delete this input setting to use bot account)
-#          user_email: jadehh@live.com  # (or delete this input setting to use bot account)
-#          commit_msg: ${{ github.event.head_commit.message }}  # (or delete this input setting to use hexo default settings)
+       #Deploy hexo blog website.
+      - name: Deploy
+        id: deploy
+        uses: sma11black/hexo-action@v1.0.3
+        with:
+          deploy_key: ${{ secrets.DEPLOY_KEY }}
+          user_name: jadehh  # (or delete this input setting to use bot account)
+          user_email: jadehh@live.com  # (or delete this input setting to use bot account)
+          commit_msg: ${{ github.event.head_commit.message }}  # (or delete this input setting to use hexo default settings)
 
