@@ -435,28 +435,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-01-10
+                    2024-01-12
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-01-10
+                    2024-01-12
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    495
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -476,7 +476,170 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <p>流媒体Api文档</p>
+<h3 id="点播接口-01-上传点播文件"><a href="#点播接口-01-上传点播文件" class="headerlink" title="点播接口 - 01 上传点播文件"></a>点播接口 - 01 上传点播文件</h3><h4 id="工作流程"><a href="#工作流程" class="headerlink" title="工作流程"></a>工作流程</h4><pre><code class="mermaid">graph LR
+上传文件 --&gt; 服务器判断有效性 --&gt; FFMPeg切片处理 --&gt; 生成M3U8点播文件 --&gt; 返回视频URL 
+</code></pre>
+<ul>
+<li>post</li>
+</ul>
+<pre><code class="text">/vod/upload
+</code></pre>
+<p>入参</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>file</td>
+<td>File</td>
+<td>上传文件</td>
+</tr>
+<tr>
+<td>path (选填)</td>
+<td>String</td>
+<td>上传子目录</td>
+</tr>
+<tr>
+<td>resolution(选填)</td>
+<td>String</td>
+<td>多清晰度转码 如 yh,hfd,hd,sd 其中yh:原始视频(必须包含)，hfd:超清，hd:高清，sd:标清</td>
+</tr>
+</tbody></table>
+<p>出参<br>200</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>id</td>
+<td>String</td>
+<td>名称</td>
+</tr>
+<tr>
+<td>size</td>
+<td>String</td>
+<td>文件大小</td>
+</tr>
+<tr>
+<td>type</td>
+<td>String</td>
+<td>文件类型</td>
+</tr>
+<tr>
+<td>status</td>
+<td>String</td>
+<td>转码状态:(转码中-transing、等待转码-waiting、转码完成-done、转码失败-error)<br>Allowed values: transing, waiting, done, error</td>
+</tr>
+<tr>
+<td>duration</td>
+<td>String</td>
+<td>时长</td>
+</tr>
+<tr>
+<td>videoCodec</td>
+<td>String</td>
+<td>视频编码</td>
+</tr>
+<tr>
+<td>audioCodec</td>
+<td>String</td>
+<td>音频编码</td>
+</tr>
+<tr>
+<td>aspect</td>
+<td>String</td>
+<td>宽高</td>
+</tr>
+<tr>
+<td>error</td>
+<td>String</td>
+<td>错误信息</td>
+</tr>
+<tr>
+<td>sharedLink</td>
+<td>String</td>
+<td>分享链接</td>
+</tr>
+<tr>
+<td>snapUrl</td>
+<td>String</td>
+<td>封面图片链接</td>
+</tr>
+<tr>
+<td>videoUrl</td>
+<td>String</td>
+<td>点播播放链接</td>
+</tr>
+<tr>
+<td>playNum</td>
+<td>Integer</td>
+<td>点播次数</td>
+</tr>
+<tr>
+<td>flowNum</td>
+<td>Integer</td>
+<td>点播总流量(B)</td>
+</tr>
+<tr>
+<td>createAt</td>
+<td>String</td>
+<td>创建时间, YYYY-MM-DD HH:mm:ss</td>
+</tr>
+<tr>
+<td>updateAt</td>
+<td>String</td>
+<td>更新时间, YYYY-MM-DD HH:mm:ss</td>
+</tr>
+</tbody></table>
+<pre><code class="json">&#123;
+  &quot;id&quot;: &quot;VcN09XFSg&quot;,
+  &quot;createAt&quot;: &quot;2024-01-10 15:26:31&quot;,
+  &quot;updateAt&quot;: &quot;2024-01-10 15:26:31&quot;,
+  &quot;name&quot;: &quot;20220518093511934749_back&quot;,
+  &quot;size&quot;: 9069143,
+  &quot;type&quot;: &quot;video/mp4&quot;,
+  &quot;path&quot;: &quot;/home/samples/SoftWare/EasyDSS-linux-4.6.0-23100914/data/vodsrc/VcN09XFSg.mp4&quot;,
+  &quot;folder&quot;: &quot;VcN09XFSg&quot;,
+  &quot;status&quot;: &quot;waiting&quot;,
+  &quot;duration&quot;: 14,
+  &quot;videoCodec&quot;: &quot;H.264&quot;,
+  &quot;audioCodec&quot;: &quot;&quot;,
+  &quot;videoCodecOriginal&quot;: &quot;H.264&quot;,
+  &quot;audioCodecOriginal&quot;: &quot;&quot;,
+  &quot;aspect&quot;: &quot;1908x1080&quot;,
+  &quot;error&quot;: &quot;&quot;,
+  &quot;shared&quot;: false,
+  &quot;shareBeginTime&quot;: null,
+  &quot;shareEndTime&quot;: null,
+  &quot;rotate&quot;: 0,
+  &quot;resolution&quot;: &quot;&quot;,
+  &quot;isresolution&quot;: false,
+  &quot;resolutiondefault&quot;: &quot;hd&quot;,
+  &quot;transvideo&quot;: false,
+  &quot;userId&quot;: &quot;&quot;,
+  &quot;localIp&quot;: &quot;172.17.0.1&quot;,
+  &quot;snapUrl&quot;: &quot;&quot;,
+  &quot;videoUrl&quot;: &quot;/fvod/VcN09XFSg/video.m3u8&quot;,
+  &quot;sharedLink&quot;: &quot;/share.html?id=VcN09XFSg&amp;type=vod&quot;,
+  &quot;flowNum&quot;: 0,
+  &quot;progress&quot;: 0,
+  &quot;playNum&quot;: 0
+&#125;
+</code></pre>
+<h2 id="视频下载"><a href="#视频下载" class="headerlink" title="视频下载"></a>视频下载</h2><ul>
+<li>使用ffmpeg将m3u8格式的文件转换成单独的mp4文件</li>
+<li>通过Api实现文件下载的功能</li>
+</ul>
+
                 
             </div>
             <hr/>
@@ -924,9 +1087,60 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/blog/article/20240109143105.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/blog/medias/featureimages/16.jpg" class="responsive-img" alt="流媒体服务Api文档">
+                        
+                        <span class="card-title">流媒体服务Api文档</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-01-12
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/blog/categories/%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/" class="post-category">
+                                    项目文档
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/blog/tags/%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/">
+                        <span class="chip bg-color">项目文档</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/blog/article/20240109093535.html">
                     <div class="card-image">
@@ -944,57 +1158,8 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-01-10
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/blog/categories/%E8%AE%BE%E5%A4%87%E6%96%87%E6%A1%A3/" class="post-category">
-                                    设备文档
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/blog/tags/%E8%AE%BE%E5%A4%87%E6%96%87%E6%A1%A3/">
-                        <span class="chip bg-color">设备文档</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/blog/article/20240109145326.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/blog/medias/featureimages/5.jpg" class="responsive-img" alt="服务器操作系统安装">
-                        
-                        <span class="card-title">服务器操作系统安装</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-01-10
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-01-12
                             </span>
                         <span class="publish-author">
                             
@@ -1162,7 +1327,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">1.8k</span>&nbsp;字
+                class="white-color">3.1k</span>&nbsp;字
             
             
             

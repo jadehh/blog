@@ -6,7 +6,7 @@
   <link href="https://jadehh.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://jadehh.github.io/blog/"/>
-  <updated>2024-01-10T06:30:48.603Z</updated>
+  <updated>2024-01-12T02:08:15.351Z</updated>
   <id>https://jadehh.github.io/blog/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>流媒体服务Api文档</title>
+    <link href="https://jadehh.github.io/blog/article/20240109143105.html"/>
+    <id>https://jadehh.github.io/blog/article/20240109143105.html</id>
+    <published>2024-01-12T02:08:15.351Z</published>
+    <updated>2024-01-12T02:08:15.351Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;流媒体Api文档&lt;/p&gt;
+&lt;h3 id=&quot;点播接口-01-上传点播文件&quot;&gt;&lt;a href=&quot;#点播接口-01-上传点播文件&quot; class=&quot;headerlink&quot; title=&quot;点播接口 - 01 上传点播文件&quot;&gt;&lt;/a&gt;点播接口 - 01 上传点播文件&lt;/h3&gt;&lt;h4</summary>
+        
+      
+    
+    
+    
+    <category term="项目文档" scheme="https://jadehh.github.io/blog/categories/%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/"/>
+    
+    
+    <category term="项目文档" scheme="https://jadehh.github.io/blog/tags/%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/"/>
+    
+  </entry>
+  
+  <entry>
     <title>服务器配置清单</title>
     <link href="https://jadehh.github.io/blog/article/20240109093535.html"/>
     <id>https://jadehh.github.io/blog/article/20240109093535.html</id>
-    <published>2024-01-10T06:30:48.603Z</published>
-    <updated>2024-01-10T06:30:48.603Z</updated>
+    <published>2024-01-12T02:08:15.303Z</published>
+    <updated>2024-01-12T02:08:15.303Z</updated>
     
     
       
@@ -55,19 +81,28 @@
   </entry>
   
   <entry>
-    <title>流媒体服务Api文档</title>
-    <link href="https://jadehh.github.io/blog/article/20240109143105.html"/>
-    <id>https://jadehh.github.io/blog/article/20240109143105.html</id>
-    <published>2024-01-10T06:30:48.603Z</published>
-    <updated>2024-01-10T06:30:48.603Z</updated>
+    <title>相机调节标准</title>
+    <link href="https://jadehh.github.io/blog/article/20240112094754.html"/>
+    <id>https://jadehh.github.io/blog/article/20240112094754.html</id>
+    <published>2024-01-12T02:08:15.303Z</published>
+    <updated>2024-01-12T02:08:15.303Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;相机调节标准&lt;/p&gt;
+&lt;h2 id=&quot;摄像机调试&quot;&gt;&lt;a href=&quot;#摄像机调试&quot; class=&quot;headerlink&quot;</summary>
+        
+      
     
     
     
+    <category term="设备文档" scheme="https://jadehh.github.io/blog/categories/%E8%AE%BE%E5%A4%87%E6%96%87%E6%A1%A3/"/>
     
-    <category term="项目文档" scheme="https://jadehh.github.io/blog/categories/%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/"/>
     
-    
-    <category term="项目文档" scheme="https://jadehh.github.io/blog/tags/%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/"/>
+    <category term="设备文档" scheme="https://jadehh.github.io/blog/tags/%E8%AE%BE%E5%A4%87%E6%96%87%E6%A1%A3/"/>
     
   </entry>
   
@@ -75,8 +110,8 @@
     <title>服务器操作系统安装</title>
     <link href="https://jadehh.github.io/blog/article/20240109145326.html"/>
     <id>https://jadehh.github.io/blog/article/20240109145326.html</id>
-    <published>2024-01-10T06:30:48.591Z</published>
-    <updated>2024-01-10T06:30:48.591Z</updated>
+    <published>2024-01-12T02:08:15.291Z</published>
+    <updated>2024-01-12T02:08:15.291Z</updated>
     
     
       
@@ -101,8 +136,8 @@
     <title>华为小站配置文档</title>
     <link href="https://jadehh.github.io/blog/article/20240108164645.html"/>
     <id>https://jadehh.github.io/blog/article/20240108164645.html</id>
-    <published>2024-01-10T06:30:48.583Z</published>
-    <updated>2024-01-10T06:30:48.583Z</updated>
+    <published>2024-01-12T02:08:15.283Z</published>
+    <updated>2024-01-12T02:08:15.283Z</updated>
     
     
       
@@ -128,7 +163,7 @@
     <link href="https://jadehh.github.io/blog/article/453215639.html"/>
     <id>https://jadehh.github.io/blog/article/453215639.html</id>
     <published>2023-12-31T19:08:07.000Z</published>
-    <updated>2024-01-10T06:30:48.583Z</updated>
+    <updated>2024-01-12T02:08:15.283Z</updated>
     
     
       

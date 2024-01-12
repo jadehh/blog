@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>流媒体服务Api文档</title>
+      <link href="/blog/article/20240109143105.html"/>
+      <url>/blog/article/20240109143105.html</url>
+      
+        <content type="html"><![CDATA[<p>流媒体Api文档</p><h3 id="点播接口-01-上传点播文件"><a href="#点播接口-01-上传点播文件" class="headerlink" title="点播接口 - 01 上传点播文件"></a>点播接口 - 01 上传点播文件</h3><h4 id="工作流程"><a href="#工作流程" class="headerlink" title="工作流程"></a>工作流程</h4><pre><code class="mermaid">graph LR上传文件 --&gt; 服务器判断有效性 --&gt; FFMPeg切片处理 --&gt; 生成M3U8点播文件 --&gt; 返回视频URL </code></pre><ul><li>post</li></ul><pre><code class="text">/vod/upload</code></pre><p>入参</p><table><thead><tr><th>参数</th><th>类型</th><th>描述</th></tr></thead><tbody><tr><td>file</td><td>File</td><td>上传文件</td></tr><tr><td>path (选填)</td><td>String</td><td>上传子目录</td></tr><tr><td>resolution(选填)</td><td>String</td><td>多清晰度转码 如 yh,hfd,hd,sd 其中yh:原始视频(必须包含)，hfd:超清，hd:高清，sd:标清</td></tr></tbody></table><p>出参<br>200</p><table><thead><tr><th>参数</th><th>类型</th><th>描述</th></tr></thead><tbody><tr><td>id</td><td>String</td><td>名称</td></tr><tr><td>size</td><td>String</td><td>文件大小</td></tr><tr><td>type</td><td>String</td><td>文件类型</td></tr><tr><td>status</td><td>String</td><td>转码状态:(转码中-transing、等待转码-waiting、转码完成-done、转码失败-error)<br>Allowed values: transing, waiting, done, error</td></tr><tr><td>duration</td><td>String</td><td>时长</td></tr><tr><td>videoCodec</td><td>String</td><td>视频编码</td></tr><tr><td>audioCodec</td><td>String</td><td>音频编码</td></tr><tr><td>aspect</td><td>String</td><td>宽高</td></tr><tr><td>error</td><td>String</td><td>错误信息</td></tr><tr><td>sharedLink</td><td>String</td><td>分享链接</td></tr><tr><td>snapUrl</td><td>String</td><td>封面图片链接</td></tr><tr><td>videoUrl</td><td>String</td><td>点播播放链接</td></tr><tr><td>playNum</td><td>Integer</td><td>点播次数</td></tr><tr><td>flowNum</td><td>Integer</td><td>点播总流量(B)</td></tr><tr><td>createAt</td><td>String</td><td>创建时间, YYYY-MM-DD HH:mm:ss</td></tr><tr><td>updateAt</td><td>String</td><td>更新时间, YYYY-MM-DD HH:mm:ss</td></tr></tbody></table><pre><code class="json">&#123;  &quot;id&quot;: &quot;VcN09XFSg&quot;,  &quot;createAt&quot;: &quot;2024-01-10 15:26:31&quot;,  &quot;updateAt&quot;: &quot;2024-01-10 15:26:31&quot;,  &quot;name&quot;: &quot;20220518093511934749_back&quot;,  &quot;size&quot;: 9069143,  &quot;type&quot;: &quot;video/mp4&quot;,  &quot;path&quot;: &quot;/home/samples/SoftWare/EasyDSS-linux-4.6.0-23100914/data/vodsrc/VcN09XFSg.mp4&quot;,  &quot;folder&quot;: &quot;VcN09XFSg&quot;,  &quot;status&quot;: &quot;waiting&quot;,  &quot;duration&quot;: 14,  &quot;videoCodec&quot;: &quot;H.264&quot;,  &quot;audioCodec&quot;: &quot;&quot;,  &quot;videoCodecOriginal&quot;: &quot;H.264&quot;,  &quot;audioCodecOriginal&quot;: &quot;&quot;,  &quot;aspect&quot;: &quot;1908x1080&quot;,  &quot;error&quot;: &quot;&quot;,  &quot;shared&quot;: false,  &quot;shareBeginTime&quot;: null,  &quot;shareEndTime&quot;: null,  &quot;rotate&quot;: 0,  &quot;resolution&quot;: &quot;&quot;,  &quot;isresolution&quot;: false,  &quot;resolutiondefault&quot;: &quot;hd&quot;,  &quot;transvideo&quot;: false,  &quot;userId&quot;: &quot;&quot;,  &quot;localIp&quot;: &quot;172.17.0.1&quot;,  &quot;snapUrl&quot;: &quot;&quot;,  &quot;videoUrl&quot;: &quot;/fvod/VcN09XFSg/video.m3u8&quot;,  &quot;sharedLink&quot;: &quot;/share.html?id=VcN09XFSg&amp;type=vod&quot;,  &quot;flowNum&quot;: 0,  &quot;progress&quot;: 0,  &quot;playNum&quot;: 0&#125;</code></pre><h2 id="视频下载"><a href="#视频下载" class="headerlink" title="视频下载"></a>视频下载</h2><ul><li>使用ffmpeg将m3u8格式的文件转换成单独的mp4文件</li><li>通过Api实现文件下载的功能</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 项目文档 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 项目文档 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>服务器配置清单</title>
       <link href="/blog/article/20240109093535.html"/>
       <url>/blog/article/20240109093535.html</url>
@@ -29,23 +54,23 @@
     
     
     <entry>
-      <title>流媒体服务Api文档</title>
-      <link href="/blog/article/20240109143105.html"/>
-      <url>/blog/article/20240109143105.html</url>
+      <title>相机调节标准</title>
+      <link href="/blog/article/20240112094754.html"/>
+      <url>/blog/article/20240112094754.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<p>相机调节标准</p><h2 id="摄像机调试"><a href="#摄像机调试" class="headerlink" title="摄像机调试"></a>摄像机调试</h2><p>AI箱号是视频抓拍，所以没有固定的点位，调试过程应该是一个车辆进卡的动态过程，箱号抓拍图的位置不会固定，过卡过程中，如果满足下面条件的图片越多，则识别率越高。</p><h2 id="相机参数调节"><a href="#相机参数调节" class="headerlink" title="相机参数调节"></a>相机参数调节</h2><h3 id="相机调试"><a href="#相机调试" class="headerlink" title="相机调试"></a>相机调试</h3><blockquote><p>监控相机的参数是一定要修改的,不然抓拍的图片会不清晰</p></blockquote><h4 id="1-所有相机都需要去除字符叠加，如下图"><a href="#1-所有相机都需要去除字符叠加，如下图" class="headerlink" title="1.所有相机都需要去除字符叠加，如下图"></a>1.所有相机都需要去除字符叠加，如下图</h4><ul><li> 1.1 车牌抓拍相机去除视频叠加文字<br><img src="https://jadehh.github.io/blog/article/20240112094754/bdeb7eae006f6165831c945b1ea9c5b.png" alt="车牌相机去除叠加文字"></li><li> 1.2 监控相机去除视频叠加文字<br><img src="https://jadehh.github.io/blog/article/20240112094754/a6171ebd26ea327ffd33e28d715fbcd.png" alt="监控相机去除叠加文字"></li><li>1.3 大华监控相机去除视频叠加文字<br><img src="https://jadehh.github.io/blog/article/20240112094754/97b694655c1d649b21669c334bc2f53.png" alt="大华相机去除叠加文字"><blockquote><p>检查所有的字符叠加,确认视频流上无任何叠加文字</p></blockquote></li></ul><h4 id="2-所有相机的的分辨率为1920-1080p，帧率为20"><a href="#2-所有相机的的分辨率为1920-1080p，帧率为20" class="headerlink" title="2.所有相机的的分辨率为1920*1080p，帧率为20"></a>2.所有相机的的分辨率为1920*1080p，帧率为20</h4><h5 id="2-1-车牌抓拍相机设置分辨率-帧率"><a href="#2-1-车牌抓拍相机设置分辨率-帧率" class="headerlink" title="2.1 车牌抓拍相机设置分辨率,帧率"></a>2.1 车牌抓拍相机设置分辨率,帧率</h5><p><img src="https://jadehh.github.io/blog/article/20240112094754/85d9c98006d379eff8743752aafc124.png" alt="车牌相机分辨率帧率设置"></p><h5 id="2-2-监控相机设置分辨率-帧率"><a href="#2-2-监控相机设置分辨率-帧率" class="headerlink" title="2.2 监控相机设置分辨率,帧率"></a>2.2 监控相机设置分辨率,帧率</h5><p><img src="https://jadehh.github.io/blog/article/20240112094754/7768c19282cb2056dd33b25e77706b4.png" alt="监控相机分辨率帧率设置"></p><h5 id="2-3-大华监控相机设置分辨率-帧率"><a href="#2-3-大华监控相机设置分辨率-帧率" class="headerlink" title="2.3 大华监控相机设置分辨率,帧率"></a>2.3 大华监控相机设置分辨率,帧率</h5><p><img src="https://jadehh.github.io/blog/article/20240112094754/1e513465ed97b0c4cdf426515083799.png" alt="大华相机分辨率帧率设置"></p><h4 id="3-监控相机需要调节曝光值和日夜切换，如下图"><a href="#3-监控相机需要调节曝光值和日夜切换，如下图" class="headerlink" title="3.监控相机需要调节曝光值和日夜切换，如下图"></a>3.监控相机需要调节曝光值和日夜切换，如下图</h4><ul><li><p>海康监控相机设置<br>曝光设置成1/500,日夜切换改成白天<br><img src="https://jadehh.github.io/blog/article/20240112094754/22a7c95b87aead3cf18b7246ef620b2.png" alt="曝光"><br><img src="https://jadehh.github.io/blog/article/20240112094754/f1b99a863c2767aad3a7f3b3b89f69d.png" alt="日夜切换"></p><blockquote><p>车牌抓拍相机无需修改</p></blockquote></li><li><p>大华监控相机设置<br>模式选择快门优先,快门选择用户定义区间,快门范围为:0~2ms<br><img src="https://jadehh.github.io/blog/article/20240112094754/1d91ad233544f26d4210da1704459a9.png" alt="模式选择"></p></li><li><p>如果曝光值不修改,会造成晚上抓拍的图模糊</p></li></ul><h2 id="前相机调试"><a href="#前相机调试" class="headerlink" title="前相机调试"></a>前相机调试</h2><p>摄像机镜头焦距和清晰度调试效果以下图为参考，调试后画面应清晰，角度和大小应与参考图片相近，否则对识别率会有影响。<br>有地磅的现场，调试的视频下边沿可以看到地磅边沿20cm为合适，地磅宽度占据整个画面宽度的1/2。<br>如下图<br><img src="https://jadehh.github.io/blog/article/20240112094754/a2d3c50600275ea35afd9a871d31ec3.png" alt="image-1662445398777"></p><blockquote><p>尽量保证蓝色的线与通道边缘内侧重合</p></blockquote><p>抓拍的箱号如下图:<br><img src="https://jadehh.github.io/blog/article/20240112094754/eb856ebb6de66f8c3a436a6d765e1dd.png" alt="image-1662445407536"><br><font color="#dd0000">箱号图片要尽量保证水平</font><br /> </p><h2 id="后相机调试"><a href="#后相机调试" class="headerlink" title="后相机调试"></a>后相机调试</h2><p>摄像机镜头焦距和清晰度调试效果以下图为参考，调试后画面应清晰，角度和大小应与参考图片相近，否则对识别率会有影响。<br>有地磅的现场，调试的视频下边沿距离地磅边沿20cm为合适，地磅宽度占据画面宽度的1/3。<br>如下图<br><img src="https://jadehh.github.io/blog/article/20240112094754/5e812d7773dd6e62791d8dcb905bb65.png" alt="image-1662445417564"></p><blockquote><p>尽量保证蓝线与地磅边缘重合,如果没有地磅与通道边缘内侧重合</p></blockquote><p>抓拍的箱号如下图<br><img src="https://jadehh.github.io/blog/article/20240112094754/28d2bc20978f58422b5923e007e068e.png" alt="image-1662445493992"><br><font color="#dd0000">箱号图片要尽量保证水平</font><br /> </p><h2 id="侧相机调试"><a href="#侧相机调试" class="headerlink" title="侧相机调试"></a>侧相机调试</h2><p>侧面相机是和验残相机同样的标准，参考验残图片<br>这里以高箱为例, 画面上下需要留白，留白区域最好相差不大,最下面可以看到轮子，留白区域如下图<br><img src="https://jadehh.github.io/blog/article/20240112094754/a555b0e8ca7453d8ad7553188e3c1b0.png" alt="image-1662445504275"><br>如下图<br><img src="https://jadehh.github.io/blog/article/20240112094754/619bac653c739c6ac01db50be96b9a4.png" alt="image-1662445511361"></p><blockquote><p>箱号集装箱顶部的蓝线优先满足，验残是必须都得满足</p></blockquote><p>抓拍的箱号如下图<br><img src="https://jadehh.github.io/blog/article/20240112094754/62ff5ee38f1d73545e4c76907d27944.png" alt="image-1662445519844"><br><font color="#dd0000">侧面相机调试时，需要保证车辆停稳后，不应能够看到箱号。</font><br /></p>]]></content>
       
       
       <categories>
           
-          <category> 项目文档 </category>
+          <category> 设备文档 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 项目文档 </tag>
+            <tag> 设备文档 </tag>
             
         </tags>
       
