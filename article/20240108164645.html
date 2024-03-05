@@ -435,21 +435,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-02-18
+                    2024-03-05
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-02-18
+                    2024-03-05
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    897
+                    955
                 </div>
                 
 
@@ -568,6 +568,13 @@ service hasplmd.service restart
 <blockquote>
 <p>账号为:admin 密码为:Samples@123</p>
 </blockquote>
+<h3 id="7-时区设置"><a href="#7-时区设置" class="headerlink" title="7 时区设置"></a>7 时区设置</h3><h4 id="7-1-查看当前时区"><a href="#7-1-查看当前时区" class="headerlink" title="7.1 查看当前时区"></a>7.1 查看当前时区</h4><pre><code class="bash">timedatectl show | grep Timezone
+</code></pre>
+<h4 id="7-2-切换当前时区"><a href="#7-2-切换当前时区" class="headerlink" title="7.2 切换当前时区"></a>7.2 切换当前时区</h4><pre><code class="bash">sudo timedatectl set-timezone Asia/Shanghai
+</code></pre>
+<blockquote>
+<p>设置时区为亚洲上海</p>
+</blockquote>
 <h2 id="8-部署"><a href="#8-部署" class="headerlink" title="8 部署"></a>8 部署</h2><pre><code class="bash">docker run   \
   --name ubuntu \
   -itd \
@@ -581,6 +588,8 @@ service hasplmd.service restart
   -v /home/data/miniD/driver/lib64:/home/data/miniD/driver/lib64 \
   -v /run/board_cfg.ini:/run/board_cfg.ini \
   -v /home/samples/sda2:/home/samples/sda2 \
+  -v /usr/sbin/ntpdate:/usr/sbin/ntpdate \
+  -v /usr/lib64/libopts.so.25:/usr/lib/libopts.so.25 \
   --restart=always \
    jadehh/container_ocr:ascend-release-1.0.3 /sbin/init
 </code></pre>
@@ -1062,7 +1071,7 @@ service hasplmd.service restart
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-02-18
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-03-05
                         </span>
                         <span class="publish-author">
                             
