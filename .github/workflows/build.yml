@@ -26,11 +26,13 @@ jobs:
         run: | 
           npm install
           npm i hexo -g
+
       - name: 本地推送
         run: |
-          hexo deploy
           git config --global user.email "jadehh@live.com"
           git config --global user.name "jadehh"
+          hexo deploy
+
        #Deploy hexo blog website.
       - name: Deploy
         id: deploy
