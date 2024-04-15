@@ -6,40 +6,36 @@ on:
       - main
 
 jobs:
-  release:
-    name: Build Website
+  build:
     runs-on: ubuntu-latest
+    name: A job to deploy blog.
     steps:
-      # 检出 Git 仓库
-      - name: Check out git repository
-        uses: actions/checkout@v4.1.1
-        with:
-          fetch-depth: 0
+    - name: Checkout
+      uses: actions/checkout@v1
+      with:
+        submodules: true
 
-       #安装 Node.js
-      - name: Install Node.js
-        uses: actions/setup-node@v4.0.0
-        with:
-          node-version: "18.x"
-      # 安装项目依赖
-      - name: Install Dependencies
-        run: | 
-          npm install
-          npm i hexo -g
+    - name: Cache node modules
+      uses: actions/cache@v1
+      id: cache
+      with:
+        path: node_modules
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+    - name: Install Dependencies
+      if: steps.cache.outputs.cache-hit != 'true'
+      run: npm ci
 
-      - name: 本地推送
-        run: |
-          git config --global user.email "jadehh@live.com"
-          git config --global user.name "jadehh"
-          hexo deploy
-
-       #Deploy hexo blog website.
-      - name: Deploy
-        id: deploy
-        uses: sma11black/hexo-action@v1.0.3
-        with:
-          deploy_key: ${{ secrets.DEPLOY_KEY }}
-          user_name: jadehh  # (or delete this input setting to use bot account)
-          user_email: jadehh@live.com  # (or delete this input setting to use bot account)
-          commit_msg: ${{ github.event.head_commit.message }}  # (or delete this input setting to use hexo default settings)
-
+    # Deploy hexo blog website.
+    - name: Deploy
+      id: deploy
+      uses: sma11black/hexo-action@v1.0.3
+      with:
+        deploy_key: ${{ secrets.HEXO_DEPLOY_KEY }}
+        user_name: jadehh
+        user_email: jadehh@live.com
+        commit_msg: ${{ github.event.head_commit.message }}ion)
+    - name: Get the output
+      run: |
+        echo "${{ steps.deploy.outputs.notify }}"
