@@ -25,8 +25,7 @@ jobs:
       - name: Install Dependencies
         run: | 
           sudo chown -R `whoami` /usr/local/lib/node_modules
-          npm install
-          npm install hexo -g
+          npm install hexo-cli -g
 
        #Deploy hexo blog website.
       - name: Deploy
