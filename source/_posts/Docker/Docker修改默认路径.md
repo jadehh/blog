@@ -86,6 +86,8 @@ sudo vi docker-overlay.conf
 ExecStart=
 ExecStart=/usr/bin/dockerd --graph=/home/jade/sda3/Docker
 ```
+> /home/jade/sda3/Docker 是需要挂载的磁盘，修改成实际需要挂载的目录
+
 ### 6.重启docker
 ```
 systemctl daemon-reload
