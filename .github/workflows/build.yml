@@ -25,7 +25,8 @@ jobs:
       - name: Install Dependencies
         run: | 
           npm install
-          npm i hexo -g
+          npm install hexo -g
+          npm install hexo-cli -g
 
        #Deploy hexo blog website.
       - name: Deploy
