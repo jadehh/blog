@@ -35,6 +35,7 @@ jobs:
         with:
           path: ./public
   deploy:
+    #测试Deploy
     needs: build
     permissions:
       pages: write
