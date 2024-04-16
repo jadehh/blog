@@ -41,7 +41,7 @@ jobs:
         run: |
           git config --global user.email "jadehh@live.com"
           git config --global user.name "jade"
-          cd publib
+          cd public
           git init
           git add *
           git commit -m  ${{ github.event.head_commit.message }}
