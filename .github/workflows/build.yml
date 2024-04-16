@@ -34,13 +34,18 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
+
+      - name: Clone Code
+        uses: actions/checkout@v3
+        with:
+          path: public
+          fetch-depth: 0  # 显示所有提交的日志
+
       - name: Add Git File
         run: |
           git config --global user.email "jadehh@live.com"
           git config --global user.name "jade"
           cd public
-          git config --global init.defaultBranch master
-          git init
           checkname=$(git rev-list --max-parents=0 HEAD)
           git checkout  $checkname -b dist  ##分支不存在用这个
           git add -A
