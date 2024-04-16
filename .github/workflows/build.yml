@@ -59,8 +59,6 @@ jobs:
           repository: ${{ secrets.GiteePath }}
           directory: code
           branch: master
-          force: true
-          tags: true
           github_url: https://gitee.com
         env:
           GITHUB_ACTOR: jadehh
