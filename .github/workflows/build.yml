@@ -34,14 +34,20 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
+      - name: Clone Code
+        uses: actions/checkout@v3
+        with:
+          repository: jadehh/TVSpider
+          path: code
+          fetch-depth: 0  # 显示所有提交的日志
+
       - name: Add Git File
         run: |
+          cd code
           git config --global user.email "jadehh@live.com"
           git config --global user.name "jade"
-          cd public
-          git config --global init.defaultBranch master
-          git config --local --add receive.shallowUpdate true:
-          git init
+          checkname=$(git rev-list --max-parents=0 HEAD)
+          cp -r ../public/* ./
           git add -A
           git commit -m  "${{ github.event.head_commit.message }}"
 
@@ -51,7 +57,7 @@ jobs:
         with:
           github_token: ${{ secrets.GiteeToken }}
           repository: ${{ secrets.GiteePath }}
-          directory: .
+          directory: code
           branch: master
           force: true
           tags: true
