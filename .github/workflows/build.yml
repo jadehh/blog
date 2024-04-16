@@ -48,7 +48,7 @@ jobs:
           git config --global user.name "jade"
           checkname=$(git rev-list --max-parents=0 HEAD)
           cp -r ../public/* ./
-          git add -A
+          git add -A  ## 添加所有文件
           git commit -m  "${{ github.event.head_commit.message }}"
 
 
