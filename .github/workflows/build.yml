@@ -34,9 +34,6 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
-      - name: Show File
-        run: |
-          ls -l
       - name: Add Git File
         run: |
           git config --global user.email "jadehh@live.com"
