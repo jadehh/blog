@@ -41,6 +41,8 @@ jobs:
           cd public
           git config --global init.defaultBranch master
           git init
+          checkname=$(git rev-list --max-parents=0 HEAD)
+          git checkout  $checkname -b dist  ##分支不存在用这个
           git add -A
           git commit -m  "${{ github.event.head_commit.message }}"
 
