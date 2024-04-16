@@ -39,8 +39,8 @@ jobs:
           git config --global user.email "jadehh@live.com"
           git config --global user.name "jade"
           cd public
-          git config --global init.defaultBranch master
           git init
+          git config --global init.defaultBranch master
           git add -A
           git commit -m  ${{ github.event.head_commit.message }}
 
