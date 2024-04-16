@@ -34,6 +34,31 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
+
+      - name: Add Git File
+        run: |
+          git config --global user.email "jadehh@live.com"
+          git config --global user.name "jade"
+          cd ./publib
+          git init
+          git add *
+          git commit -m "提交Pages"
+
+
+      - name: Upload Gitee branch
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GiteeToken }}
+          repository: ${{ secrets.GiteePath }}
+          directory: .
+          branch: master
+          force: true
+          tags: true
+          github_url: https://gitee.com
+        env:
+          GITHUB_ACTOR: jadehh
+
+
   deploy:
     #测试Deploy
     needs: build
