@@ -37,11 +37,9 @@ jobs:
       - name: Clone Code
         uses: actions/checkout@v3
         with:
-          repository: jadehh_743/blog
+          repository: jadehh/TVSpider
           path: code
-          ref: master
           fetch-depth: 0  # 显示所有提交的日志
-          github-server-url: 'https://gitee.com/'
 
       - name: Add Git File
         run: |
