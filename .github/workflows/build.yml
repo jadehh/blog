@@ -39,6 +39,7 @@ jobs:
         with:
           repository: jadehh_743/blog
           path: code
+          ref: master
           fetch-depth: 0  # 显示所有提交的日志
           github-server-url: 'https://gitee.com/'
 
