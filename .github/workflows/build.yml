@@ -37,17 +37,16 @@ jobs:
       - name: Clone Code
         uses: actions/checkout@v3
         with:
-          repository: jadehh/TVSpider
+          repository: jadehh_743/blog
           path: code
           fetch-depth: 0  # 显示所有提交的日志
+          github-server-url: 'https://gitee.com/'
 
       - name: Add Git File
         run: |
           cd code
           git config --global user.email "jadehh@live.com"
           git config --global user.name "jade"
-          checkname=$(git rev-list --max-parents=0 HEAD)
-          git checkout  $checkname -b dist  ##分支不存在用这个
           cp -r ../public/* ./
           git add -A  ## 添加所有文件
           git commit -m  "${{ github.event.head_commit.message }}"
