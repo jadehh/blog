@@ -47,7 +47,7 @@ jobs:
             git config --global user.email "jadehh@live.com"
             git config --global user.name "jade"
             checkname=$(git rev-list --max-parents=0 HEAD)
-            git checkout  $checkname -b master  ##分支不存在用这个
+            git checkout  $checkname -b dist  ##分支不存在用这个
             cp -r ../public/* ./
             git add -A  ## 添加所有文件
             git commit -m  "${{ github.event.head_commit.message }}"
@@ -59,7 +59,7 @@ jobs:
           github_token: ${{ secrets.GiteeToken }}
           repository: ${{ secrets.GiteePath }}
           directory: code
-          branch: master
+          branch: dist
           github_url: https://gitee.com
         env:
           GITHUB_ACTOR: jadehh
