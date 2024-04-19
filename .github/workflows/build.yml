@@ -64,7 +64,7 @@ jobs:
           branch: master
           github_url: https://gitee.com
         env:
-          GITHUB_ACTOR: jadehh
+          GITHUB_ACTOR: jadehh_743
 
   deploy:
     #测试Deploy
