@@ -49,6 +49,41 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
+      - name: Clone Code
+        uses: actions/checkout@v3
+        with:
+          repository: jadehh/blog
+          path: code
+          ref: main
+          fetch-depth: 0  # 显示所有提交的日志
+          token: ${{ secrets.GH_PAT }}
+
+
+      - name: Add Git File
+        run: |
+          cd code
+          git config --global user.email "jadehh@live.com"
+          git config --global user.name "jade"
+          checkname=$(git rev-list --max-parents=0 HEAD)
+          git checkout  $checkname -b public  ##分支不存在用这个
+          cp -r ../public/* ./
+          git add -A  ## 添加所有文件
+          git commit -m  "${{ github.event.head_commit.message }}"
+
+
+      - name: Upload Public branch
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GH_PAT }}
+          repository: jadehh/blog
+          directory: code
+          force: true
+          tags: true
+          branch: public
+        env:
+          GITHUB_ACTOR: jadehh
+
+
   Sync:
     runs-on: ubuntu-latest
     steps:
@@ -63,13 +98,13 @@ jobs:
           # 注意替换为你的 Gitee 目标仓库地址
           destination-repo: git@gitee.com:jadehh_743/blog.git
 
-      - name: Build Gitee Pages
-        uses: yanglbme/gitee-pages-action@master
-        with:
-          # 注意替换为你的 Gitee 用户名
-          gitee-username: jadehh_743
-          # 注意在 Settings->Secrets 配置 GITEE_PASSWORD
-          gitee-password: ${{ secrets.GITEE_PASSWORD }}
-          # 注意替换为你的 Gitee 仓库
-          gitee-repo: jadehh_743/blog
+#      - name: Build Gitee Pages
+#        uses: yanglbme/gitee-pages-action@master
+#        with:
+#          # 注意替换为你的 Gitee 用户名
+#          gitee-username: jadehh_743
+#          # 注意在 Settings->Secrets 配置 GITEE_PASSWORD
+#          gitee-password: ${{ secrets.GITEE_PASSWORD }}
+#          # 注意替换为你的 Gitee 仓库
+#          gitee-repo: jadehh_743/blog
 
