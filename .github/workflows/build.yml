@@ -49,7 +49,7 @@ jobs:
         run: |
             cd code
             git config --global user.email "jadehh@live.com"
-            git config --global user.name "jadehh@live.com"
+            git config --global user.name "jade"
             cp -r ../public/* ./
             git add -A  ## 添加所有文件
             git commit -m  "${{ github.event.head_commit.message }}"
@@ -61,10 +61,12 @@ jobs:
           github_token: ${{ secrets.GiteeToken }}
           repository: ${{ secrets.GiteePath }}
           directory: code
+          force: true
+          tags: true
           branch: master
           github_url: https://gitee.com
         env:
-          GITHUB_ACTOR: jadehh@live.com
+          GITHUB_ACTOR: jadehh
 
   deploy:
     #测试Deploy
