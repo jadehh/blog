@@ -68,24 +68,7 @@ jobs:
           branch: public
         env:
           GITHUB_ACTOR: jadehh
-  deploy:
-    #测试Deploy
-    needs: build
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
 
-  Sync:
-    runs-on: ubuntu-latest
-    steps:
       - name: Sync to Gitee
         uses: wearerequired/git-mirror-action@master
         env:
@@ -106,4 +89,20 @@ jobs:
 #          gitee-password: ${{ secrets.GITEE_PASSWORD }}
 #          # 注意替换为你的 Gitee 仓库
 #          gitee-repo: jadehh_743/blog
+
+  deploy:
+    #测试Deploy
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
 
