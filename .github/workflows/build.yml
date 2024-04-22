@@ -34,40 +34,6 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
-      - name: Clone Code
-        uses: actions/checkout@v3
-        with:
-          repository: jadehh_743/blog
-          path: code
-          ref: master
-          fetch-depth: 0  # 显示所有提交的日志
-          github-server-url: 'https://gitee.com/'
-          token: ${{ secrets.GiteeToken }}
-
-
-      - name: Add Git File
-        run: |
-            cd code
-            git config --global user.email "jadehh@live.com"
-            git config --global user.name "jade"
-            cp -r ../public/* ./
-            git add -A  ## 添加所有文件
-            git commit -m  "${{ github.event.head_commit.message }}"
-          
-
-      - name: Upload Gitee branch
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GiteeToken }}
-          repository: ${{ secrets.GiteePath }}
-          directory: code
-          force: true
-          tags: true
-          branch: master
-          github_url: https://gitee.com
-        env:
-          GITHUB_ACTOR: jadehh
-
   deploy:
     #测试Deploy
     needs: build
@@ -82,4 +48,28 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  Sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sync to Gitee
+        uses: wearerequired/git-mirror-action@master
+        env:
+          # 注意在 Settings->Secrets 配置 GITEE_RSA_PRIVATE_KEY
+          SSH_PRIVATE_KEY: ${{ secrets.GITEE_RSA_PRIVATE_KEY }}
+        with:
+          # 注意替换为你的 GitHub 源仓库地址
+          source-repo: git@github.com:jadehh/blog.git
+          # 注意替换为你的 Gitee 目标仓库地址
+          destination-repo: git@gitee.com:jadehh_743/blog.git
+
+      - name: Build Gitee Pages
+        uses: yanglbme/gitee-pages-action@master
+        with:
+          # 注意替换为你的 Gitee 用户名
+          gitee-username: jadehh_743
+          # 注意在 Settings->Secrets 配置 GITEE_PASSWORD
+          gitee-password: ${{ secrets.GITEE_PASSWORD }}
+          # 注意替换为你的 Gitee 仓库
+          gitee-repo: jadehh_743/blog
 
