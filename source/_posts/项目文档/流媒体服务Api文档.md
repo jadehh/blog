@@ -11,7 +11,9 @@ data: 2024/1/9 14:31
 
 流媒体Api文档
 
-# 点播接口 - 01 上传点播文件
+# 点播接口
+
+## 点播接口 - 01 上传点播文件
 
 工作流程
 
@@ -93,7 +95,54 @@ graph LR
 }
 ```
 
-# 点播接口 - 02 下载点播文件
+## 点播接口 - 02 获取标签下对应的点播列表
+
+* GET|POST
+
+```http
+/vod/list
+```
+
+參數
+
+| 欄位           | 類型   | 描述                                              |
+| :------------- | :----- | :------------------------------------------------ |
+| folder**選填** | String | 子文件夹                                          |
+| start          | Number | 分页开始,从零开始                                 |
+| limit          | Number | 分页大小                                          |
+| sort**選填**   | String | 排序字段                                          |
+| order**選填**  | String | 排序顺序Allowed values: `ascending`, `descending` |
+| q**選填**      | String | 查询参数                                          |
+
+200
+
+| 欄位       | 類型     | 描述                                                         |
+| :--------- | :------- | :----------------------------------------------------------- |
+| total      | Number   | 总数                                                         |
+| rows       | Object[] | 分页数据                                                     |
+| id         | String   |                                                              |
+| name       | String   | 名称                                                         |
+| size       | String   | 文件大小                                                     |
+| type       | String   | 文件类型                                                     |
+| status     | String   | 转码状态:(转码中-transing、等待转码-waiting、转码完成-done、转码失败-error)Allowed values: `transing`, `waiting`, `done`, `error` |
+| duration   | String   | 时长                                                         |
+| videoCodec | String   | 视频编码                                                     |
+| audioCodec | String   | 音频编码                                                     |
+| aspect     | String   | 宽高                                                         |
+| error      | String   | 错误信息                                                     |
+| sharedLink | String   | 分享链接                                                     |
+| snapUrl    | String   | 封面图片链接                                                 |
+| videoUrl   | String   | 点播播放链接                                                 |
+| playNum    | Integer  | 点播次数                                                     |
+| flowNum    | Integer  | 点播总流量(B)                                                |
+| createAt   | String   | 创建时间, YYYY-MM-DD HH:mm:ss                                |
+| updateAt   | String   | 更新时间, YYYY-MM-DD HH:mm:ss                                |
+
+
+
+
+
+## 点播接口 - 03 下载点播文件
 
 ~~~mermaid
 graph LR
@@ -109,13 +158,15 @@ graph LR
 | 参数  | 类型     | 描述   |
 |-----|--------|------|
 | id	 | String | 点播ID |
- 
+
 入参
 
 * 使用ffmpeg将m3u8格式的文件转换成单独的mp4文件
 * 通过Api实现文件下载的功能
 
-# 直播接口 - 01 新建/编辑直播
+# 直播接口
+
+## 直播接口 - 01 新建/编辑直播
 
 * post
 
@@ -195,7 +246,7 @@ graph LR
 }
 ```
 
-# 直播接口 - 02 获取直播列表
+## 直播接口 - 02 获取直播列表
 * post
 
 ```bash
@@ -310,7 +361,143 @@ graph LR
 }
 ```
 
-# 录像回看接口 - 01 查询有录像设备
+
+
+## 直播接口 - 03 获取正在直播会话信息列表
+
+POST
+
+```http
+/live/sessions
+```
+
+參數
+
+| 欄位                | 類型   | 描述                                                         |
+| :------------------ | :----- | :----------------------------------------------------------- |
+| id**選填**          | string | 传递时返回单路的session信息                                  |
+| application**選填** | String | 应用名称,不传默认查询所有Allowed values: `live`, `vlive`, `openLive`, `all` |
+
+200
+
+| 欄位            | 類型   | 描述                               |
+| :-------------- | :----- | :--------------------------------- |
+| Application     | String | 应用名称                           |
+| AudioBitrate    | Number | 音频率                             |
+| Type            | String | 类型                               |
+| HLS             | String | HLS地址                            |
+| HTTP-FLV        | String | HTTP-FLV地址                       |
+| WS-FLV          | String | WS-FLV地址                         |
+| Id              | String | 推流ID                             |
+| InBitrate       | Number | 推送码率                           |
+| InBytes         | Number | 推送流量                           |
+| NumOutputs      | Number | 在线人数                           |
+| OutBitrate      | Number | 输出码率                           |
+| OutBytes        | Number | 输出流量                           |
+| RTMP            | String | RTMP直播地址                       |
+| RTSP            | String | RTSP直播地址                       |
+| Time            | String | 直播时长                           |
+| VideoBitrate    | String | 视频码率                           |
+| Name            | String | 直播流名称，匿名直播名称为空字符串 |
+| VideoCodec      | String | 视频编码                           |
+| AudioCodec      | String | 音频编码                           |
+| StartTime       | String | 开始时间                           |
+| AudioSampleRate | Number | 音频采样率                         |
+| AudioChannel    | Number | 音频通道                           |
+| VideoHeight     | Number | 视频高度                           |
+| VideoWidth      | Number | 视频宽度                           |
+| PublisherIP     | String | 推送者ip                           |
+
+- [返回示例](http://192.168.29.157:10086/apidoc/#success-examples-03live-PostLiveSessions-0_0_0-0)
+
+```json
+[
+    {
+        "Id": "nmted1",
+        "Name": "nmted1",
+        "Type": "openLive",
+        "Application": "hls",
+        "HLS": "/hls/nmted1/nmted1_live.m3u8",
+        "HTTP-FLV": "/flv/hls/nmted1.flv",
+        "WS-FLV": "",
+        "RTMP": "rtmp://demo.easydss.com:10085/hls/nmted1",
+        "RTSP": "rtsp://demo.easydss.com:10554/nmted1",
+        "Time": "0h 33m 1s",
+        "NumOutputs": 2,
+        "InBytes": 655953750,
+        "OutBytes": 1378478815,
+        "PublisherIP": "114.97.242.136",
+        "InBitrate": 361795,
+        "OutBitrate": 723591,
+        "AudioBitrate": 22215,
+        "VideoBitrate": 339580,
+        "VideoHeight": 720,
+        "VideoWidth": 1280,
+        "AudioChannel": 2,
+        "AudioCodec": "AAC",
+        "AudioSampleRate": 44100,
+        "AudioSampleSize": 16,
+        "StartTime": "2020-07-29 14:37:32",
+        "VideoCodec": "H264"
+    },
+    {
+        "Id": "nmted1",
+        "Name": "nmted1",
+        "Type": "openLive",
+        "Application": "record",
+        "HLS": "/EasyDSS-windows-3.0.0-2007211602/data/record/nmted1/nmted1_live.m3u8",
+        "HTTP-FLV": "/flv/record/nmted1.flv",
+        "WS-FLV": "",
+        "RTMP": "rtmp://demo.easydss.com:10085/record/nmted1",
+        "RTSP": "rtsp://demo.easydss.com:10554/nmted1",
+        "Time": "0h 33m 1s",
+        "NumOutputs": 0,
+        "InBytes": 655953750,
+        "OutBytes": 0,
+        "PublisherIP": "127.0.0.1",
+        "InBitrate": 361795,
+        "OutBitrate": 0,
+        "AudioBitrate": 22215,
+        "VideoBitrate": 339580,
+        "VideoHeight": 720,
+        "VideoWidth": 1280,
+        "AudioChannel": 2,
+        "AudioCodec": "AAC",
+        "AudioSampleRate": 44100,
+        "AudioSampleSize": 16,
+        "StartTime": "2020-07-29 14:37:32",
+        "VideoCodec": "H264"
+    }
+]
+```
+
+## 直播接口 - 04 直播流开关
+
+POST
+
+```http
+/live/turn/actived
+```
+
+參數
+
+| 欄位    | 類型    | 描述                    |
+| :------ | :------ | :---------------------- |
+| id      | String  | 直播流ID                |
+| actived | Boolean | 开启：true，关闭：false |
+
+- [成功](http://192.168.29.157:10086/apidoc/#success-examples-03live-PostLiveTurnActived-0_0_0-0)
+
+```json
+HTTP/1.1 200 OK
+{"code":200,"msg":"Success"}
+```
+
+
+
+# 录像接口
+
+## 录像回看接口 - 02 查询有录像设备
 
 * post
 
@@ -358,9 +545,9 @@ graph LR
 
 
 
-# 录像回看接口 - 10 指定时间段录像播放及下载
+## 录像回看接口 - 2 指定时间段录像播放及下载
 
-GET
+* GET
 
 ```http
 /record/video/:operate/:id/:starttime/:endtime
@@ -386,3 +573,4 @@ http://127.0.0.1:10080/record/video/play/teet/20180911101139/20180911101248
 ```json
 http://127.0.0.1:10080/record/video/download/teet/20180911101139/20180911101248
 ```
+
