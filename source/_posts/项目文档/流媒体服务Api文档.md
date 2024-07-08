@@ -95,6 +95,10 @@ graph LR
 }
 ```
 
+---
+
+
+
 ## 点播接口 - 02 获取标签下对应的点播列表
 
 * GET|POST
@@ -138,7 +142,7 @@ graph LR
 | createAt   | String   | 创建时间, YYYY-MM-DD HH:mm:ss                                |
 | updateAt   | String   | 更新时间, YYYY-MM-DD HH:mm:ss                                |
 
-
+---
 
 
 
@@ -163,6 +167,62 @@ graph LR
 
 * 使用ffmpeg将m3u8格式的文件转换成单独的mp4文件
 * 通过Api实现文件下载的功能
+
+
+
+## 点播接口 - 04 删除点播
+
+**0.0.0** 
+
+POST
+
+```http
+/vod/remove
+```
+
+## 參數
+
+| 欄位 | 類型   | 描述 |
+| :--- | :----- | :--- |
+| id   | String |      |
+
+- [成功](http://192.168.29.157:10086/apidoc/#success-examples-02vod-PostVodRemove-0_0_0-0)
+
+```json
+HTTP/1.1 200 OK
+{"code":200,"msg":"Success"}
+```
+
+----
+
+
+
+## 点播接口 - 05 批量删除点播文件
+
+**0.0.0** 
+
+POST
+
+```http
+/vod/removeBatch
+```
+
+參數
+
+| 欄位 | 類型  | 描述 |
+| :--- | :---- | :--- |
+| ids  | Array |      |
+
+- [成功](http://192.168.29.157:10086/apidoc/#success-examples-02vod-PostVodRemovebatch-0_0_0-0)
+
+```json
+HTTP/1.1 200 OK
+{"code":200,"msg":"Success"}
+```
+
+---
+
+
 
 # 直播接口
 
@@ -246,7 +306,12 @@ graph LR
 }
 ```
 
+---
+
+
+
 ## 直播接口 - 02 获取直播列表
+
 * post
 
 ```bash
@@ -361,6 +426,8 @@ graph LR
 }
 ```
 
+---
+
 
 
 ## 直播接口 - 03 获取正在直播会话信息列表
@@ -471,6 +538,10 @@ POST
 ]
 ```
 
+----
+
+
+
 ## 直播接口 - 04 直播流开关
 
 POST
@@ -493,11 +564,119 @@ HTTP/1.1 200 OK
 {"code":200,"msg":"Success"}
 ```
 
+---
+
+
+
+## 直播接口 - 05 推流鉴权
+
+**0.0.0** 
+
+POST
+
+```http
+/live/turn/authed
+```
+
+參數
+
+| 欄位   | 類型    | 描述 |
+| :----- | :------ | :--- |
+| id     | String  |      |
+| authed | Boolean |      |
+
+- [成功]()
+
+```json
+HTTP/1.1 200 OK
+{"code":200,"msg":"Success"}
+```
+
+----
+
+
+
+## 直播接口 - 06 删除直播
+
+**0.0.0** 
+
+POST
+
+```http
+/live/remove
+```
+
+## 參數
+
+| 欄位           | 類型    | 描述                                                         |
+| :------------- | :------ | :----------------------------------------------------------- |
+| id             | String  |                                                              |
+| record**選填** | Boolean | 同时删除录像否, 该参数只对非正在直播的条目有效預設值: `false` |
+
+- [成功]()
+
+```json
+HTTP/1.1 200 OK
+{"code":200,"msg":"Success"}
+```
+
+---
+
+## 直播接口 - 07 获取单条/多条直播流信息
+
+**0.0.0** 
+
+GET|POST
+
+```http
+/live/get
+```
+
+參數
+
+| 欄位 | 類型   | 描述                                                         |
+| :--- | :----- | :----------------------------------------------------------- |
+| id   | String | 传递单个id，返回单条直播流信息；若英文逗号拼接传递多个，返回的多个直播流信息数组； |
+
+200
+
+| 欄位            | 類型    | 描述                          |
+| :-------------- | :------ | :---------------------------- |
+| id              | String  |                               |
+| name            | String  |                               |
+| recordReserve   | Number  | 录像保存(天)                  |
+| actived         | String  | 推流开关                      |
+| authed          | Boolean | 推流鉴权                      |
+| shared          | Boolean | 分享开关                      |
+| url             | String  | 推流地址                      |
+| sharedLink      | String  | 分享链接                      |
+| storePath       | String  | 存储路径                      |
+| createAt        | String  | 创建时间, YYYY-MM-DD HH:mm:ss |
+| updateAt        | String  | 更新时间, YYYY-MM-DD HH:mm:ss |
+| session**選填** | Object  | 直播信息, 有值时表示正在直播  |
+| Application     | String  | 应用名称                      |
+| AudioBitrate    | Number  | 音频率                        |
+| HLS             | String  | HLS地址                       |
+| HTTP-FLV        | String  | HTTP-FLV地址                  |
+| Id              | String  | 推流ID                        |
+| InBitrate       | Number  | 推送码率                      |
+| InBytes         | Number  | 推送流量                      |
+| NumOutputs      | Number  | 在线人数                      |
+| OutBitrate      | Number  | 输出码率                      |
+| OutBytes        | Number  | 输出流量                      |
+| RTMP            | String  | RTMP直播地址                  |
+| Time            | String  | 直播时长                      |
+| VideoBitrate    | String  | 音频码率                      |
+
+---
+
+
+
 
 
 # 录像接口
 
-## 录像回看接口 - 02 查询有录像设备
+## 录像回看接口 - 01 查询有录像设备
 
 * post
 
@@ -543,9 +722,11 @@ HTTP/1.1 200 OK
 }
 ```
 
+---
 
 
-## 录像回看接口 - 2 指定时间段录像播放及下载
+
+## 录像回看接口 - 02 指定时间段录像播放及下载
 
 * GET
 
@@ -574,3 +755,35 @@ http://127.0.0.1:10080/record/video/play/teet/20180911101139/20180911101248
 http://127.0.0.1:10080/record/video/download/teet/20180911101139/20180911101248
 ```
 
+---
+
+
+
+## 录像回看接口 - 03 查询设备所有录像记录
+
+**0.0.0** 
+
+GET|POST
+
+```http
+/record/query_flags
+```
+
+參數
+
+| 欄位 | 類型   | 描述 |
+| :--- | :----- | :--- |
+| id   | String |      |
+
+200
+
+| 欄位  | 類型   | 描述                                               |
+| :---- | :----- | :------------------------------------------------- |
+| key   | String | 月份, YYYYMM                                       |
+| value | String | 标记当月每一天是否有录像, 0 - 没有录像, 1 - 有录像 |
+
+- [成功示例](http://192.168.29.157:10086/apidoc/#success-examples-05record-Get|postRecordQuery_flags-0_0_0-0)
+
+```json
+{201803: "0000000011000000000000000000000"}
+```
