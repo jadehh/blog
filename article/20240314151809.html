@@ -1,0 +1,1889 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="算法配置界面文档">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>算法配置界面文档 | 🐘 简伯</title>
+    <link rel="icon" type="image/png" href="/blog/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/blog/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/blog/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/blog/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/blog/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/blog/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/blog/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/blog/css/my.css">
+
+    <script src="/blog/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/blog/atom.xml" title="🐘 简伯" type="application/atom+xml">
+</head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/blog/" class="waves-effect waves-light">
+                    
+                    <img src="/blog/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">🐘 简伯</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/blog/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/blog/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/blog/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/blog/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/blog/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle-o" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/blog/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/blog/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">🐘 简伯</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/blog/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/blog/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/blog/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/blog/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/blog/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle-o"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/blog/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/jadehh/" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/jadehh/" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/blog/medias/featureimages/23.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">算法配置界面文档</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/blog/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/blog/tags/%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/">
+                                <span class="chip bg-color">项目文档</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/blog/categories/%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/" class="post-category">
+                                项目文档
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2025-03-14
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2025-03-14
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    5.6k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    19 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        <link rel="stylesheet" href="/blog/libs/prism/prism.css">
+        <!-- 代码块折行 -->
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>[TOC]</p>
+<h1 id="算法操作手册"><a href="#算法操作手册" class="headerlink" title="算法操作手册"></a>算法操作手册</h1><h2 id="1-算法配置界面安装"><a href="#1-算法配置界面安装" class="headerlink" title="1. 算法配置界面安装"></a>1. 算法配置界面安装</h2><p><a id="algorithmconfigui_install"> </a></p>
+<p><a target="_blank" rel="noopener" href="https://uvonsqacl2.feishu.cn/drive/folder/fldcnylooqAi67so7BZfYQ4xwqm">下载地址</a></p>
+<h3 id="1-1-下载算法前端配置界面"><a href="#1-1-下载算法前端配置界面" class="headerlink" title="1.1 下载算法前端配置界面"></a>1.1 下载算法前端配置界面</h3><img src="https://jadehh.github.io/blog/article/20240314151809/image-20250314093858029.png"  />
+
+
+<p><strong>下载当前最新的版本,新版本都会兼容旧版本</strong>  </p>
+<blockquote>
+<p>目前支持Windows x86和x64操作系统,Ubuntu18.04 x86 操作系统和Linux Arm 操作系统</p>
+</blockquote>
+<h3 id="1-2-版本介绍"><a href="#1-2-版本介绍" class="headerlink" title="1.2 版本介绍"></a>1.2 版本介绍</h3><img src="https://jadehh.github.io/blog/article/20240314151809/image-20250314094024923.png"  />
+
+<ul>
+<li><p>Portable代表纯净版,不包含任何算法，需要在帮助-&gt;检查更新-&gt;更新所需算法</p>
+</li>
+<li><p>完整版集成了通用版本的箱号识别算法</p>
+<hr>
+</li>
+</ul>
+<h3 id="1-3-安装算法前端配置界面"><a href="#1-3-安装算法前端配置界面" class="headerlink" title="1.3. 安装算法前端配置界面"></a>1.3. 安装算法前端配置界面</h3><img src="https://jadehh.github.io/blog/article/20240314151809/image-20240315111740307.png#pic_left"/>
+
+
+<blockquote>
+<p>一直下一步即可,直到安装完成</p>
+</blockquote>
+<hr>
+<h3 id="1-4-打开算法前端配置界面"><a href="#1-4-打开算法前端配置界面" class="headerlink" title="1.4.打开算法前端配置界面"></a>1.4.打开算法前端配置界面</h3><img src="https://jadehh.github.io/blog/article/20240314151809/image-20250314094221156.png"  />
+
+<ul>
+<li>目前支持箱号识别服务,视频拼接服务,线阵相机拼接服务,自动验残服务,厂内车牌识别服务,多车牌识别服务,视频计数服务<h2 id="2-算法配置界面功能介绍"><a href="#2-算法配置界面功能介绍" class="headerlink" title="2. 算法配置界面功能介绍"></a>2. 算法配置界面功能介绍</h2></li>
+</ul>
+<h3 id="2-1-文件"><a href="#2-1-文件" class="headerlink" title="2.1 文件"></a>2.1 文件</h3><img src="https://jadehh.github.io/blog/article/20240314151809/image-20240315132249607.png"  />
+
+<h4 id="2-1-1-新建通道功能"><a href="#2-1-1-新建通道功能" class="headerlink" title="2.1.1 新建通道功能"></a>2.1.1 新建通道功能</h4><p><a id="create_channel"> </a></p>
+<ul>
+<li>tab页面在哪就对应的新建什么样的算法通道,如当前在箱号识别服务就是新建箱号通道。</li>
+<li>新建通道只针对于服务器上没有安装过算法服务，如果服务器上已存在算法服务，会导致新建通道失败</li>
+</ul>
+<blockquote>
+<p>详情配置信息见不同算法配置界面</p>
+</blockquote>
+<p>​    新建通道，保存配置会在主界面生成一条通道配置信息，点击启动服务会将算法程序下发到服务器上，并启动算法服务</p>
+<img src="https://jadehh.github.io/blog/article/20240314151809/image-20240315133652727.png"  />
+
+<p>​    实时日志界面</p>
+<img src="https://jadehh.github.io/blog/article/20240314151809/image-20240315133924109.png"  />
+
+<h4 id="2-1-2-更新通道"><a href="#2-1-2-更新通道" class="headerlink" title="2.1.2 更新通道"></a>2.1.2 更新通道</h4><p>更新通道界面</p>
+<img src="https://jadehh.github.io/blog/article/20240314151809/image-20240315130749263.png"  />
+
+<ul>
+<li>服务器上安装过算法的，先更新通道，输入服务器的ip,用户名和密码,点击更新配置文件按钮</li>
+</ul>
+<blockquote>
+<p>华为小站的SSH端口号默认为2222</p>
+</blockquote>
+<h4 id="2-1-3-清除数据"><a href="#2-1-3-清除数据" class="headerlink" title="2.1.3 清除数据"></a>2.1.3 清除数据</h4><ul>
+<li>清空本地配置信息，并不会删除服务器上的配置信息</li>
+<li>主要用于使用自己的笔记本部署算法，切换到不同现场时，需要将本地的配置信息清空</li>
+</ul>
+<h4 id="2-1-4-清除服务"><a href="#2-1-4-清除服务" class="headerlink" title="2.1.4 清除服务"></a>2.1.4 清除服务</h4><p>清除服务界面</p>
+<img src="https://jadehh.github.io/blog/article/20240314151809/image-20240315132428267.png"  />
+
+<ul>
+<li>清除服务器上安装的程序文件，并删除文件</li>
+<li>停止服务器上所有运行的Docker容器，并删除容器</li>
+<li>主要用于现场安装的算法服务版本较老，无法通过更新通道的方式获取服务器上安装的算法信息</li>
+</ul>
+<h4 id="2-1-5-退出程序"><a href="#2-1-5-退出程序" class="headerlink" title="2.1.5 退出程序"></a>2.1.5 退出程序</h4><p>即程序退出功能</p>
+<h3 id="2-2-查看"><a href="#2-2-查看" class="headerlink" title="2.2 查看"></a>2.2 查看</h3><img src="https://jadehh.github.io/blog/article/20240314151809/image-20250314131959643.png"  />
+
+<h4 id="2-2-1-箱号历史数据查询"><a href="#2-2-1-箱号历史数据查询" class="headerlink" title="2.2.1 箱号历史数据查询"></a>2.2.1 箱号历史数据查询</h4><blockquote>
+<p>查询箱号识别记录，必须先更新通道或新建通道之后，才可以查询箱号识别记录</p>
+</blockquote>
+<p>箱号历史数据查询界面</p>
+<img src="https://jadehh.github.io/blog/article/20240314151809/image-20240315133530920.png"  />
+
+<ul>
+<li>通道名称: 可以根据配置的通道信息进行切换</li>
+<li>可以根据时间段去查询箱号识别记录</li>
+<li>运行脚本支持图片下载，视频下载，数据导出excel, 等其他操作</li>
+</ul>
+<blockquote>
+<p>详情见<a href="#pass_record_detail">相机调试工具</a></p>
+</blockquote>
+<h4 id="2-2-2-云平台历史查询"><a href="#2-2-2-云平台历史查询" class="headerlink" title="2,2.2  云平台历史查询"></a>2,2.2  云平台历史查询</h4><p><a id="cloud_history_query"> </a></p>
+<p>云平台历史查询界面</p>
+<img src="https://jadehh.github.io/blog/article/20240314151809/image-20240315140141630.png" alt="image-20240315140141630"  />
+
+<ul>
+<li>配置云平台数据库信息，可以在算法配置客户端上直接查询云平台的过卡信息</li>
+<li>运行脚本运行保存车牌图片，保存箱号图片，数据导出为excel等</li>
+<li>可以根据现禁行的关键词筛选过卡记录</li>
+<li>支持筛选禁行条件，可以有多个禁行条件筛选，方便排查禁行原因</li>
+<li>支持云平台记录直接匹配箱号记录，可以查看识别原图，和识别日志</li>
+</ul>
+<blockquote>
+<p>详情见<a href="#pass_record_detail">相机调试工具</a></p>
+</blockquote>
+<h4 id="2-2-3-验残和车牌数据和其他查询"><a href="#2-2-3-验残和车牌数据和其他查询" class="headerlink" title="2.2.3  验残和车牌数据和其他查询"></a>2.2.3  验残和车牌数据和其他查询</h4><p>与箱号数据查询类似，其中云平台Lite指的就是云平台码头版本与云平台查询类似</p>
+<h3 id="2-3-工具"><a href="#2-3-工具" class="headerlink" title="2.3 工具"></a>2.3 工具</h3><img src="https://jadehh.github.io/blog/article/20240314151809/image-20250314132611137.png" />
+
+<h4 id="2-3-1-服务器测试工具"><a href="#2-3-1-服务器测试工具" class="headerlink" title="2.3.1 服务器测试工具"></a>2.3.1 服务器测试工具</h4><img alt="image-20250314132630587" src="https://jadehh.github.io/blog/article/20240314151809/image-20250314132630587.png"/>
+
+<h5 id="2-3-1-1-测试箱号识别服务"><a href="#2-3-1-1-测试箱号识别服务" class="headerlink" title="2.3.1.1 测试箱号识别服务"></a>2.3.1.1 测试箱号识别服务</h5><p>测试箱号识别服务界面</p>
+<img src="https://jadehh.github.io/blog/article/20240314151809/image-20240315141530937.png" alt="image-20240315141530937"  />
+
+<ul>
+<li>通过算法配置客户端所在机器向不同的通道服务发送请求，可以用来确认箱号服务是否正常</li>
+<li>查看箱号识别结果，根据识别结果可以查看详情</li>
+<li>可以模拟循环测试</li>
+<li>也可以通过开始时间和结束时间来模拟测试</li>
+</ul>
+<h5 id="2-3-1-2-测试视频拼接服务"><a href="#2-3-1-2-测试视频拼接服务" class="headerlink" title="2.3.1.2 测试视频拼接服务"></a>2.3.1.2 测试视频拼接服务</h5><img src="https://jadehh.github.io/blog/article/20240314151809/image-20240315142300952.png" alt="image-20240315142300952"  />
+
+<ul>
+<li>模拟没有车辆车辆进来信号和车辆离开信号拼接视频</li>
+</ul>
+<h5 id="2-3-1-3-测试视频计数服务"><a href="#2-3-1-3-测试视频计数服务" class="headerlink" title="2.3.1.3 测试视频计数服务"></a>2.3.1.3 测试视频计数服务</h5><img src="https://jadehh.github.io/blog/article/20240314151809/image-20240315142714946.png" alt="image-20240315142714946" />
+
+<ul>
+<li>模拟计数开始和计数结束信号，开始计数算法</li>
+</ul>
+<h5 id="2-3-1-4-测试过卡数据"><a href="#2-3-1-4-测试过卡数据" class="headerlink" title="2.3.1.4 测试过卡数据"></a>2.3.1.4 测试过卡数据</h5><ul>
+<li>根据导出的过卡数据库可视化</li>
+</ul>
+<h5 id="2-3-1-5-模拟21报文转发"><a href="#2-3-1-5-模拟21报文转发" class="headerlink" title="2.3.1.5 模拟21报文转发"></a>2.3.1.5 模拟21报文转发</h5><img src="https://jadehh.github.io/blog/article/20240314151809/image-20240315143558153.png" alt="image-20240315143558153"  />
+
+<ul>
+<li>转发卡口的0x21报文给视频拼接服务，或者其他服务</li>
+</ul>
+<h5 id="2-3-1-6-统计真实箱号和测试箱号通道"><a href="#2-3-1-6-统计真实箱号和测试箱号通道" class="headerlink" title="2.3.1.6 统计真实箱号和测试箱号通道"></a>2.3.1.6 统计真实箱号和测试箱号通道</h5><img src="https://jadehh.github.io/blog/article/20240314151809/image-20240315143818730.png" alt="image-20240315143818730" />
+
+<ul>
+<li>算法更新时，可以在现场直接新增一条测试通道，在正式通道上配置转发地址，将车辆进来信号转发给测试通道</li>
+<li>测试通道的数据与正式通道的数据进行比对，查看新算法是否在识别率上有提升，不影响现场正常工作。</li>
+</ul>
+<h4 id="2-3-2-服务器设置工具"><a href="#2-3-2-服务器设置工具" class="headerlink" title="2.3.2 服务器设置工具"></a>2.3.2 服务器设置工具</h4><img alt="image-20250314132803640" src="https://jadehh.github.io/blog/article/20240314151809/image-20250314132803640.png"/>
+
+<h5 id="2-3-2-1-设置FTP工具"><a href="#2-3-2-1-设置FTP工具" class="headerlink" title="2.3.2.1 设置FTP工具"></a>2.3.2.1 设置FTP工具</h5><img alt="image-20250314132908851" src="https://jadehh.github.io/blog/article/20240314151809/image-20250314132908851.png"/>
+
+<ul>
+<li>选择对应的服务器IP地址，将服务器上安装FTP服务，目前视频拼接服务必须要安装FTP服务。</li>
+</ul>
+<h5 id="2-3-2-2-磁盘清理工具"><a href="#2-3-2-2-磁盘清理工具" class="headerlink" title="2.3.2.2 磁盘清理工具"></a>2.3.2.2 磁盘清理工具</h5><p><a id="install_clean_service"> </a></p>
+<img src="https://jadehh.github.io/blog/article/20240314151809/image-20240315145641852.png" alt="image-20240315145641852"  />
+
+<ul>
+<li>支持手动清理和安装自动清理服务自动清理</li>
+<li>清理类型如果视频录制功能打开的话，根据现场走车清空，来自定义设置</li>
+</ul>
+<h5 id="2-3-2-3-加密狗工具"><a href="#2-3-2-3-加密狗工具" class="headerlink" title="2.3.2.3 加密狗工具 "></a>2.3.2.3 加密狗工具 <a id="restart_hasp"></a></h5><img src="https://jadehh.github.io/blog/article/20240314151809/image-20240315145853295.png" alt="image-20240315145853295"  />
+
+<img src="https://jadehh.github.io/blog/article/20240314151809/image-20240315150048147.png" alt="image-20240315150048147"  />
+
+<ul>
+<li>查看当前服务器上加密狗是否正常</li>
+<li>在浏览器中查看加密狗的并发数是否遇到限制</li>
+</ul>
+<h5 id="2-3-2-4-时钟同步工具"><a href="#2-3-2-4-时钟同步工具" class="headerlink" title="2.3.2.4 时钟同步工具"></a>2.3.2.4 时钟同步工具</h5><img src="https://jadehh.github.io/blog/article/20240314151809/image-20240315150137696.png" alt="image-20240315150137696"  />
+
+<ul>
+<li>支持将算法客户端运行的机器设置为时钟同步服务器(仅支持Windows端)</li>
+<li>设置服务器的IP地址，将服务器的时间与本机时间进行同步，设置同步频率</li>
+</ul>
+<h5 id="2-3-2-5-重启加密狗工具"><a href="#2-3-2-5-重启加密狗工具" class="headerlink" title="2.3.2.5 重启加密狗工具"></a>2.3.2.5 重启加密狗工具</h5><img src="https://jadehh.github.io/blog/article/20240314151809/image-20240315150319928.png" alt="image-20240315150319928"  />
+
+<ul>
+<li>重启加密狗服务，相当于物理上将加密狗进行拔插</li>
+<li>为了解决服务停止时，可能会存在锁不释放的问题，会导致服务重启时报加密狗异常的问题</li>
+</ul>
+<h5 id="2-3-2-6-升级加密狗驱动"><a href="#2-3-2-6-升级加密狗驱动" class="headerlink" title="2.3.2.6 升级加密狗驱动"></a>2.3.2.6 升级加密狗驱动</h5><img src="https://jadehh.github.io/blog/article/20240314151809/image-20240315150450661.png" alt="image-20240315150450661"  />
+
+<ul>
+<li>解决算法服务启动过程遇到升级加密狗的问题处理</li>
+</ul>
+<h4 id="2-3-3-调试工具"><a href="#2-3-3-调试工具" class="headerlink" title="2.3.3 调试工具"></a>2.3.3 调试工具</h4><img alt="image-20250314133016578" src="https://jadehh.github.io/blog/article/20240314151809/image-20250314133016578.png"/>
+
+<h5 id="2-3-3-1-相机调试工具"><a href="#2-3-3-1-相机调试工具" class="headerlink" title="2.3.3.1 相机调试工具"></a>2.3.3.1 相机调试工具</h5><p><a id="camera_setting"></a></p>
+<img src="https://jadehh.github.io/blog/article/20240314151809/image-20240315150829590.png" alt="image-20240315150829590" />
+
+<ul>
+<li>输入相机的ip，用户名和密码，点击测试连接出现相机实时画面页面</li>
+<li>根据画面中出现的辅助线来调节相机的角度</li>
+</ul>
+<h5 id="2-3-3-2-线阵相机调试工具"><a href="#2-3-3-2-线阵相机调试工具" class="headerlink" title="2.3.3.2  线阵相机调试工具"></a>2.3.3.2  线阵相机调试工具</h5><p><a id="ds_camera_setting"></a></p>
+<img alt="image-20250314133339870" src="https://jadehh.github.io/blog/article/20240314151809/image-20250314133339870.png"/>
+
+<p>查找设备，同一局域网内的线阵相机设备和直连的线阵相机设备</p>
+<img alt="image-20250314133449316" src="https://jadehh.github.io/blog/article/20240314151809/image-20250314133449316.png"/>
+
+<p>选择设备连接</p>
+<p>​    <img alt="image-20250314133517229" src="https://jadehh.github.io/blog/article/20240314151809/image-20250314133517229.png"/></p>
+<p>连接设备后，可以打开设备和修改设备IP</p>
+<img alt="image-20250314133628765" src="https://jadehh.github.io/blog/article/20240314151809/image-20250314133628765.png"/>
+
+<p>开始采集</p>
+<img alt="image-20250314133828666" src="https://jadehh.github.io/blog/article/20240314151809/image-20250314133828666.png"/>
+
+<p>触发模式，由手动触发</p>
+<img alt="image-20250314133932680" src="https://jadehh.github.io/blog/article/20240314151809/image-20250314133932680.png"/>
+
+<p>修改设备IP</p>
+<img alt="image-20250314133607994" src="https://jadehh.github.io/blog/article/20240314151809/image-20250314133607994.png"/>
+
+
+
+<h5 id="2-3-3-3-网络调试工具"><a href="#2-3-3-3-网络调试工具" class="headerlink" title="2.3.3.3  网络调试工具"></a>2.3.3.3  网络调试工具</h5><img src="https://jadehh.github.io/blog/article/20240314151809/image-20240315152117288.png" alt="image-20240315152117288" />
+
+<ul>
+<li>选择通道名称或所有通道，点击测试按钮</li>
+<li>会测试该通道的所有网络设备的情况，包括服务器本身</li>
+</ul>
+<p>网络测试详情界面</p>
+<img src="https://jadehh.github.io/blog/article/20240314151809/image-20240315152245798.png" alt="image-20240315152245798"  />
+
+<h5 id="2-2-3-4-EIO-测试工具"><a href="#2-2-3-4-EIO-测试工具" class="headerlink" title="2.2.3.4 EIO 测试工具"></a>2.2.3.4 EIO 测试工具</h5><img alt="image-20250314134056235" src="https://jadehh.github.io/blog/article/20240314151809/image-20250314134056235.png"/>
+
+<h5 id="2-3-3-5-视频拼接管理服务"><a href="#2-3-3-5-视频拼接管理服务" class="headerlink" title="2.3.3.5 视频拼接管理服务  "></a>2.3.3.5 视频拼接管理服务  <a id="stitching_manage_service"></a></h5><img src="https://jadehh.github.io/blog/article/20240314151809/image-20240315152324904.png" alt="image-20240315152324904" />
+
+<ul>
+<li>视频拼接管理服务是用来接受验残平台下发的视频拼接通道配置信息</li>
+<li>统一由算法配置界面进行管理，无需在像之前在各个服务器上部署管理服务 ，根据相机的类型，自动区分是视频拼接服务还是线阵相机拼接服务</li>
+</ul>
+<h4 id="2-3-4-服务器安装工具"><a href="#2-3-4-服务器安装工具" class="headerlink" title="2.3.4 服务器安装工具"></a>2.3.4 服务器安装工具</h4><img alt="image-20250314155012670" src="https://jadehh.github.io/blog/article/20240314151809/image-20250314155012670.png"/>
+
+<ul>
+<li><p>支持本机安装和远程安装，本机安装需要将软件部署在服务器上， 安装时需要确保服务器有外网。</p>
+</li>
+<li><p>把所有的需要执行的安装命令，都需要安装一遍</p>
+</li>
+<li><p>如果需要远程安装的话，需要在服务器上先安装好openssh-server才行，执行以下命令:</p>
+</li>
+<li><pre><code class="bash">sudo apt-get update
+sudo apt-get install openssh-server
+</code></pre>
+</li>
+</ul>
+<h3 id="2-4-统计分析"><a href="#2-4-统计分析" class="headerlink" title="2.4  统计分析"></a>2.4  统计分析</h3><p>可视化箱号识别率和抓拍率</p>
+<img alt="image-20250314142207876" src="https://jadehh.github.io/blog/article/20240314151809/image-20250314142207876.png"/>
+
+<h4 id="2-4-1-集中监控统计分析"><a href="#2-4-1-集中监控统计分析" class="headerlink" title="2.4.1 集中监控统计分析"></a>2.4.1 集中监控统计分析</h4><img alt="image-20250314150018605" src="https://jadehh.github.io/blog/article/20240314151809/image-20250314150018605.png"/>
+
+<h4 id="2-4-2-云平台统计分析"><a href="#2-4-2-云平台统计分析" class="headerlink" title="2.4.2 云平台统计分析"></a>2.4.2 云平台统计分析</h4><img alt="image-20250314153212139" src="https://jadehh.github.io/blog/article/20240314151809/image-20250314153212139.png"/>
+
+<h4 id="2-4-3-云平台码头版统计分析"><a href="#2-4-3-云平台码头版统计分析" class="headerlink" title="2.4.3 云平台码头版统计分析"></a>2.4.3 云平台码头版统计分析</h4><img alt="image-20250314153417172" src="https://jadehh.github.io/blog/article/20240314151809/image-20250314153417172.png"/>
+
+<h4 id="2-4-4-箱号抓拍率统计分析"><a href="#2-4-4-箱号抓拍率统计分析" class="headerlink" title="2.4.4  箱号抓拍率统计分析"></a>2.4.4  箱号抓拍率统计分析</h4><img alt="image-20250314153558420" src="https://jadehh.github.io/blog/article/20240314151809/image-20250314153558420.png"/>
+
+<h3 id="2-5-帮助"><a href="#2-5-帮助" class="headerlink" title="2.5 帮助"></a>2.5 帮助</h3><p>帮助界面包含各种文档，版本信息，下载信息，和版本设置</p>
+<img alt="image-20250314153733601" src="https://jadehh.github.io/blog/article/20240314151809/image-20250314153733601.png"/>
+
+<h4 id="2-5-1-关于"><a href="#2-5-1-关于" class="headerlink" title="2.5.1 关于"></a>2.5.1 关于</h4><img alt="image-20250314153800579" src="https://jadehh.github.io/blog/article/20240314151809/image-20250314153800579.png"/>
+
+<ul>
+<li>算法配置界面版本和最新算法服务版本</li>
+</ul>
+<h4 id="2-5-2-帮助文档"><a href="#2-5-2-帮助文档" class="headerlink" title="2.5.2 帮助文档"></a>2.5.2 帮助文档</h4><p><a target="_blank" rel="noopener" href="https://uvonsqacl2.feishu.cn/drive/folder/fldcnA0Ux50kWcuMVNtTJys2dHg">文档地址</a></p>
+<img alt="image-20250314153907329" src="https://jadehh.github.io/blog/article/20240314151809/image-20250314153907329.png"/>
+
+<h4 id="2-5-3-工具下载"><a href="#2-5-3-工具下载" class="headerlink" title="2.5.3 工具下载"></a>2.5.3 工具下载</h4><p><a target="_blank" rel="noopener" href="https://uvonsqacl2.feishu.cn/drive/folder/fldcnSZbrcnZ5s2vQ4uDLk6i0Ef">下载地址</a></p>
+<h4 id="2-5-4-软件下载"><a href="#2-5-4-软件下载" class="headerlink" title="2.5.4 软件下载"></a>2.5.4 软件下载</h4><p><a target="_blank" rel="noopener" href="https://uvonsqacl2.feishu.cn/drive/folder/fldcnylooqAi67so7BZfYQ4xwqm">下载地址</a></p>
+<h4 id="2-5-5-Docker镜像下载"><a href="#2-5-5-Docker镜像下载" class="headerlink" title="2.5.5 Docker镜像下载"></a>2.5.5 Docker镜像下载</h4><p><id a="download_docker"> </a></p>
+<img alt="image-20250314154037407" src="https://jadehh.github.io/blog/article/20240314151809/image-20250314154037407.png"/>
+
+<h4 id="2-5-6-算法包下载"><a href="#2-5-6-算法包下载" class="headerlink" title="2.5.6 算法包下载"></a>2.5.6 算法包下载</h4><p><a target="_blank" rel="noopener" href="https://uvonsqacl2.feishu.cn/drive/folder/fldcnFYuckykYoqanTYwrGeeKih">下载地址</a></p>
+<img alt="image-20250314154231486" src="https://jadehh.github.io/blog/article/20240314151809/image-20250314154231486.png"/>
+
+<ul>
+<li>也可以通过<a href="#check_update">检查更新</a>的方式实现在线下载</li>
+</ul>
+<h4 id="2-5-7-检查更新"><a href="#2-5-7-检查更新" class="headerlink" title="2.5.7 检查更新"></a>2.5.7 检查更新</h4><p><a id="check_update"></a></p>
+<img alt="image-20250314154417038" src="https://jadehh.github.io/blog/article/20240314151809/image-20250314154417038.png"/>
+
+<ul>
+<li>通过在线下载的方式，下载算法包和算法配置界面，如果下载速度慢可以通过<a href="#proxy">代理设置</a>加速下载</li>
+</ul>
+<h4 id="2-5-8-语言设置"><a href="#2-5-8-语言设置" class="headerlink" title="2.5.8 语言设置"></a>2.5.8 语言设置</h4><p>切换语言</p>
+<img alt="image-20250314154651804" src="https://jadehh.github.io/blog/article/20240314151809/image-20250314154651804.png"/>
+
+<h4 id="2-5-9-代理设置"><a href="#2-5-9-代理设置" class="headerlink" title="2.5.9 代理设置"></a>2.5.9 代理设置</h4><img alt="image-20250314154718212" src="https://jadehh.github.io/blog/article/20240314151809/image-20250314154718212.png"/>
+
+<ul>
+<li>解决下载速度慢的问题</li>
+</ul>
+<h2 id="3-箱号识别服务部署"><a href="#3-箱号识别服务部署" class="headerlink" title="3. 箱号识别服务部署"></a>3. 箱号识别服务部署</h2><h3 id="3-1-环境准备"><a href="#3-1-环境准备" class="headerlink" title="3.1 环境准备"></a>3.1 环境准备</h3><ul>
+<li>相机环境: 参考<a target="_blank" rel="noopener" href="https://uvonsqacl2.feishu.cn/file/boxcnWlyts7rnQ3bHSHuHhL3Twb">相机配置文档</a>，调节相机参数，角度调节参考算法配置工具中的<a href="#camera_setting">相机调试工具</a></li>
+<li>服务器环境: 参考<a target="_blank" rel="noopener" href="https://uvonsqacl2.feishu.cn/file/SMM6b8qM6oLUMexBwWNc60znnCJ">服务器操作系统安装</a></li>
+<li>算法配置界面:参考<a href="#algorithmconfigui_install">算法配置界面安装</a></li>
+</ul>
+<h3 id="3-2-箱号识别服务流程"><a href="#3-2-箱号识别服务流程" class="headerlink" title="3.2  箱号识别服务流程"></a>3.2  箱号识别服务流程</h3><ul>
+<li>分为箱号服务，箱号图像抓拍，箱号识别三个任务</li>
+</ul>
+<h4 id="3-2-1-箱号服务"><a href="#3-2-1-箱号服务" class="headerlink" title="3.2.1 箱号服务"></a>3.2.1 箱号服务</h4><ul>
+<li><p>主要工作，将实时识别过程中的识别记录，通过逻辑优化多个相机的识别结果，选取最优图片和最优结果组成一个完成的包并与前端通信。</p>
+</li>
+<li><p>如果配置的相机有三个，并且三个相机都获取到识别结果的话，则返回箱号识别结果，如果有一个相机没有识别结果，会继续等待直到满足最大超时时间，强制返回结果</p>
+</li>
+<li><p>如果空车超时时间内，没有抓拍到集装箱图片则会返回空车结果</p>
+</li>
+</ul>
+<h4 id="3-2-2-箱号图像抓拍"><a href="#3-2-2-箱号图像抓拍" class="headerlink" title="3.2.2 箱号图像抓拍"></a>3.2.2 箱号图像抓拍</h4><ul>
+<li>接入相机实时流，进行箱门检测任务，抓拍到的箱门图片与箱号识别服务通信获取识别结果。</li>
+<li>获取箱门信息，检测视频流中是否还有箱门信息</li>
+<li>视频录制功能</li>
+<li>集装箱的危险品检测</li>
+</ul>
+<h4 id="3-2-3-箱号识别"><a href="#3-2-3-箱号识别" class="headerlink" title="3.2.3 箱号识别"></a>3.2.3 箱号识别</h4><ul>
+<li>负责箱号图片的识别</li>
+</ul>
+<h3 id="3-3-箱号识别服务配置界面"><a href="#3-3-箱号识别服务配置界面" class="headerlink" title="3.3 箱号识别服务配置界面  "></a>3.3 箱号识别服务配置界面 <id a="container_config_view"> </a></h3><p>参考算法配置界面的 <a href="#create_channel">新建通道</a></p>
+<img alt="image-20250314134404955" src="https://jadehh.github.io/blog/article/20240314151809/image-20250314134404955.png"/>
+
+<ul>
+<li><p>服务器ip地址: 箱号识别服务所需要安装的服务器地址</p>
+</li>
+<li><p>通道名称: 需要与云平台的通道名称保持一致</p>
+</li>
+<li><p>端口号: 通过该端口号区分同一台服务器上部署的多通道，并与卡口交互</p>
+</li>
+<li><p>是否返回识别错误的箱号: 默认是不返回识别错误的箱号，仅针对单箱的情况下</p>
+</li>
+<li><p>是否开启危化品检测: 识别结果返回危化品标志的检测</p>
+</li>
+<li><p>是否转发: 新增测试通道没有设备与之交互，可以将正式通道的信号转发给测试通道</p>
+</li>
+<li><p>设备类型参数: 默认(限于30显卡以下)，ONNX(30显卡及以上)，华为小站，博时特盒子，和P360(同方定制设备，Intel I7 Cpu重新编译)，默认的算法配置界面仅支持默认的设备类型，其他的需要在线更新或离线下载的方式，并根据设备类型的不同选择不一样的Docker镜像 , <a href="#download_docker">Docker镜像下载</a></p>
+</li>
+<li><p>相机类型: 区分海康相机与大华相机</p>
+</li>
+<li><p>服务类型: 默认的服务类型为三宝科技，是传统WebService交互，车辆进来时就开始和箱号服务交互，并一直等待箱号识别服务返回识别结果，前端配置地址栏：显示的是以WSDL结尾的关键词，同方威视是与同方威视定制的协议，有车辆进来时间和车辆离开时间。新版三宝科技协议是目前再用的Http通讯协议: 卡口端以车辆离开为信号，并传入车辆进来的时间，通过多次请求，来访问箱号识别结果。</p>
+</li>
+<li><p>现场集装箱规则</p>
+<img alt="image-20250314134625744" src="https://jadehh.github.io/blog/article/20240314151809/image-20250314134625744.png"/>
+
+<pre><code>集装箱等级规则，默认为1. 
+* 0 - 识别规则为: 不允许重车误识别,不进行筛选   (只要拍了照就是重车)   (适用于现场无空车或不允许重车当成空车) ==&gt; 存在的情况就是补采变多,会有空车误识别成重车，重车基本不可能变成空车
+* 1 - 识别规则为: 允许空车误识别,筛选少部分空车 (拍照得分高于2.5,则认为是重车) (默认现场) ==&gt; 还是会存在空车误识别成重车的情况，重车也有可能变成空车
+* 2 - 识别规则为: 允许重车误识别,筛选大多数空车 (拍照得分高与5,则认为是重车)   (适用于现场监管严格，空车时也会校验)  ==&gt; 基本不会出现空车误识别成重车的情况，重车更有可能变成空车，
+* 3 - 识别规则为: 不允许空车误识别,筛选所有空车 (识别了箱号才是重车，不识别就是空车) (适用于现场空车多或散货车多) ==&gt; 存在的情况就是重车容易误识别成空车，空车基本不可能变成重车，
+</code></pre>
+</li>
+</ul>
+<ul>
+<li><p>视频录制开关: 如果打开视频录制开关，需要注意磁盘的使用情况，将自动清理服务的时间缩短</p>
+</li>
+<li><p>区域限制: 如下图，红色的线就代表识别区域外，为了解决现场通道邻近，同时来车，会将临道的识别结果作为本次识别结果返回(也可以使用相机本身涂鸦功能，将区域外的地方进行涂鸦)</p>
+</li>
+</ul>
+<img src="https://jadehh.github.io/blog/article/20240314151809/image-20240315154143917.png" alt="image-20240315154143917"  />
+
+<ul>
+<li><p>空车超时时间: 指的就是在14s内所有相机都没有抓拍到集装箱图片，则认定当前是空车，根据现场实际走车情况进行设置</p>
+</li>
+<li><p>最大超时时间：指的是在20s内有部分相机抓拍到集装箱图片或识别图片，不在等待其他相机识别结果直接返回识别结果给前端，如果现场普遍走车慢可以将此参数适当增大，最大超时时间一定要大于空车超时时间</p>
+</li>
+<li><p>异常结束时间冗余: 是指卡口没有车辆进来信号，发全0序列号，往前推移15s的数据，(目前是卡口日志上有全0序列号，但实际全没有和箱号交互)</p>
+</li>
+<li><p>向前冗余时间指的是收到车辆进来信号之前，往前在推移2s，防止侧面箱号在车辆进来之前就已经识别，如果是离开信号，则在偏移时间基础上再往前推移2s</p>
+</li>
+<li><p>固定箱数: 对于一些场站只存在拉一种箱子的情况，可以将固定箱数的值设为1，这样就不会存在误识别成双箱的问题</p>
+</li>
+</ul>
+<h5 id="3-2-1-通讯协议的变化"><a href="#3-2-1-通讯协议的变化" class="headerlink" title="3.2.1 通讯协议的变化"></a>3.2.1 通讯协议的变化</h5><p>​    新版三宝科技与三宝科技比较，优势在于可以过滤一部分的不规划行驶，如果车压在车检器上时间过长，以车辆离开为请求开始为请求箱号，记录偏移时间 = 车辆离开时间 - 车辆进来时间，这样就能获取完整的过卡记录，如果是以前那种模式车辆进来就获取箱号，无法获取整体的过卡记录，会导致没有箱号。同时会有心跳报文检测箱号识别服务是否在线功能。</p>
+<h3 id="3-4-箱号识别服务过卡详情界面"><a href="#3-4-箱号识别服务过卡详情界面" class="headerlink" title="3.4 箱号识别服务过卡详情界面"></a>3.4 箱号识别服务过卡详情界面</h3><p><a id="pass_record_detail"></a></p>
+<img src="https://jadehh.github.io/blog/article/20240314151809/image-20240315165808040.png" alt="image-20240315165808040"  />
+
+<ul>
+<li>支持过卡视频查看:前提是配置了所有视频录制功能</li>
+<li>支持过卡日志查看</li>
+<li>支持保存过卡所有的图片 （参与识别了图片都会保存 与配置的最大识别数量相对应）</li>
+</ul>
+<h3 id="3-5-问题排查"><a href="#3-5-问题排查" class="headerlink" title="3.5 问题排查"></a>3.5 问题排查</h3><h4 id="3-5-1-日志查看"><a href="#3-5-1-日志查看" class="headerlink" title="3.5.1 日志查看"></a>3.5.1 日志查看</h4><h5 id="3-5-1-1-详情中查看过卡日志"><a href="#3-5-1-1-详情中查看过卡日志" class="headerlink" title="3.5.1.1 详情中查看过卡日志"></a>3.5.1.1 详情中查看过卡日志</h5><p>​    点击过卡详情中的过卡日志，可以查看当前记录的过卡日志</p>
+<img src="https://jadehh.github.io/blog/article/20240314151809/image-20240315180151557.png" alt="image-20240315180151557" />
+
+<blockquote>
+<p>可以手动修改到达时间和结束时间，根据时间去筛选日志，日志界面支持ctrl+F 搜索日志</p>
+</blockquote>
+<h5 id="3-5-1-2-详情中查看过卡日志"><a href="#3-5-1-2-详情中查看过卡日志" class="headerlink" title="3.5.1.2 详情中查看过卡日志"></a>3.5.1.2 详情中查看过卡日志</h5><p>​        在主界面中点击查看历史日志</p>
+<p>​        <img src="https://jadehh.github.io/blog/article/20240314151809/image-20240315180324658.png" alt="image-20240315180324658"  /></p>
+<ul>
+<li>docker.log 中记录了完整的日志</li>
+<li>info.log 记录了箱号服务的日志</li>
+<li>capture_log 记录了抓拍日志</li>
+<li>conta_ocr_log 记录了识别日志</li>
+</ul>
+<h5 id="3-5-1-3-云平台中看日志"><a href="#3-5-1-3-云平台中看日志" class="headerlink" title="3.5.1.3 云平台中看日志"></a>3.5.1.3 云平台中看日志</h5><p>​        <a href="#cloud_history_query">云平台历史查询</a>  （云平台数据详情界面中可以根据匹配箱号，查看箱号的过卡记录）</p>
+<h4 id="3-5-2-常见问题"><a href="#3-5-2-常见问题" class="headerlink" title="3.5.2 常见问题"></a>3.5.2 常见问题</h4><ol>
+<li><p>云平台识别标志显示异常:</p>
+<p>1.1 无车辆进来信号，卡口没有和箱号服务交互</p>
+<p>1.2 箱号识别服务异常: 可以通过测试工具去测试箱号服务是否在线</p>
+<p>1.3  箱号识别异常，有图片无箱号，箱号识别错误</p>
+</li>
+<li><p>识别的问题</p>
+<p>2.1 规范行驶的问题，有无跟车或长时间压车检器或停在通道中间等异常行为</p>
+<p>2.2 检查箱子有无污损，如果没有抓拍图片则查看录制的视频，污损容易导致不识别或单箱识别成双箱</p>
+<p>2.3 磁盘满， <a href="#install_clean_service">安装自动清理服务</a></p>
+<p>2.4 特定集装公司号，需要重新训练</p>
+<p>2.5 软件运行出错，通过升级解决 <a href="#check_update">检查更新</a></p>
+</li>
+<li><p>部署问题:</p>
+<p>3.1 确保服务器正常运行</p>
+<p>3.2 实时日志报错:</p>
+<p>​    镜像不存在,请在帮助中点击镜像下载并安装 </p>
+<p>​    加密狗异常: 先停止服务，<a href="#restart_hasp">重启加密狗</a>，在启动服务</p>
+<p>​    升级加密狗驱动</p>
+</li>
+</ol>
+<h2 id="4-视频拼接服务部署"><a href="#4-视频拼接服务部署" class="headerlink" title="4. 视频拼接服务部署"></a>4. 视频拼接服务部署</h2><h3 id="4-1-环境准备"><a href="#4-1-环境准备" class="headerlink" title="4.1 环境准备"></a>4.1 环境准备</h3><ul>
+<li><p>相机环境: 参考<a target="_blank" rel="noopener" href="https://uvonsqacl2.feishu.cn/file/boxcnWlyts7rnQ3bHSHuHhL3Twb">相机配置文档</a>，调节相机参数，角度调节参考算法配置工具中的相机调试工具<a href="#camera_setting">相机调试工具</a></p>
+</li>
+<li><p>服务器环境: 参考<a target="_blank" rel="noopener" href="https://uvonsqacl2.feishu.cn/file/GEkAbCnfoo3sIKxUMsBcj2yTnkf">服务器操作系统安装</a></p>
+</li>
+<li><p>算法配置界面:参考<a href="#algorithmconfigui_install">算法配置界面安装</a></p>
+</li>
+</ul>
+<h3 id="4-2-启动视频拼接管理服务"><a href="#4-2-启动视频拼接管理服务" class="headerlink" title="4.2 启动视频拼接管理服务"></a>4.2 启动视频拼接管理服务</h3><p><a href="#stitching_manage_service">转到视频拼接管理服务</a></p>
+<img src="https://jadehh.github.io/blog/article/20240314151809/image-20240524135038412.png" alt="image-20240524135038412.png"  />
+
+
+<blockquote>
+<p>点击启动视频拼接管理服务，这样就可以从验残平台中下发相机配置到算法配置界面中，不在由之前的每台服务器分别管理，由算法配置界面统一管理</p>
+</blockquote>
+<img alt="image-20250314140535673" src="https://jadehh.github.io/blog/article/20240314151809/image-20250314140535673.png"/>
+
+<h3 id="4-3-视频拼接服务界面"><a href="#4-3-视频拼接服务界面" class="headerlink" title="4.3 视频拼接服务界面"></a>4.3 视频拼接服务界面</h3><p>接收到验残平台下发的配置信息并显示</p>
+<img src="https://jadehh.github.io/blog/article/20240314151809/image-20240524140109110.png" alt="image-20240524140109110.png"  />
+
+
+<blockquote>
+<p>点击启动即可完成视频拼接服务的启动</p>
+</blockquote>
+<h3 id="4-4-视频拼接服务配置界面"><a href="#4-4-视频拼接服务配置界面" class="headerlink" title="4.4 视频拼接服务配置界面"></a>4.4 视频拼接服务配置界面</h3> <img src="https://jadehh.github.io/blog/article/20240314151809/image-20240524140414855.png" alt="image-20240524140414855.png"  />
+
+
+<ul>
+<li>是否开启自动验残，开启自动验残需要配置正确的自动验残服务，如下图，选择自动验残服务，或者手动配置自动验残的ip地址和自动验残的端口号</li>
+</ul>
+<img src="https://jadehh.github.io/blog/article/20240314151809/image-20240524140536782.png" alt="image-20240524140536782.png"  />
+
+<ul>
+<li>等待卡口报文和拼接报文的最大匹配时间(根据拼接完成和收到卡口0x21报文的时间去做匹配，在30s以内认定为一个车次，只有匹配成功才做自动验残任务)</li>
+</ul>
+<blockquote>
+<p>其他参数均为默认无需修改。</p>
+</blockquote>
+<h2 id="5-线阵相机拼接服务部署"><a href="#5-线阵相机拼接服务部署" class="headerlink" title="5. 线阵相机拼接服务部署"></a>5. 线阵相机拼接服务部署</h2><h3 id="5-1-环境准备"><a href="#5-1-环境准备" class="headerlink" title="5.1 环境准备"></a>5.1 环境准备</h3><ul>
+<li><p>相机环境: 参考<a target="_blank" rel="noopener" href="https://uvonsqacl2.feishu.cn/file/TsDFb83zCoqPyVxNhCxch4uCngb">线阵相机调试文档</a>，调节相机参数，角度调节参考算法配置工具中的相机调试工具<a href="#ds_camera_setting">线阵相机调试工具</a></p>
+</li>
+<li><p>服务器环境: 参考<a target="_blank" rel="noopener" href="https://uvonsqacl2.feishu.cn/file/GEkAbCnfoo3sIKxUMsBcj2yTnkf">服务器操作系统安装</a></p>
+</li>
+<li><p>算法配置界面:参考<a href="#algorithmconfigui_install">算法配置界面安装</a></p>
+</li>
+</ul>
+<h3 id="5-2-启动视频拼接管理服务"><a href="#5-2-启动视频拼接管理服务" class="headerlink" title="5.2 启动视频拼接管理服务"></a>5.2 启动视频拼接管理服务</h3><p><a href="#stitching_manage_service">转到视频拼接管理服务</a></p>
+<img src="https://jadehh.github.io/blog/article/20240314151809/image-20240524135038412.png" alt="image-20240524135038412.png"  />
+
+
+<blockquote>
+<p>点击启动视频拼接管理服务，这样就可以从验残平台中下发相机配置到算法配置界面中，不在由之前的每台服务器分别管理，由算法配置界面统一管理, 会根据相机类型自动区分监控相机和线阵相机</p>
+</blockquote>
+<img alt="image-20250314140535673" src="https://jadehh.github.io/blog/article/20240314151809/image-20250314140535673.png"/>
+
+<h3 id="5-3-视频拼接服务界面"><a href="#5-3-视频拼接服务界面" class="headerlink" title="5.3 视频拼接服务界面"></a>5.3 视频拼接服务界面</h3><p>接收到验残平台下发的配置信息并显示</p>
+<img alt="image-20250314141114291" src="https://jadehh.github.io/blog/article/20240314151809/image-20250314141114291.png"/>
+
+
+<blockquote>
+<p>点击启动即可完成线阵相机拼接服务的启动</p>
+</blockquote>
+<h3 id="5-4-线阵相机拼接服务配置界面"><a href="#5-4-线阵相机拼接服务配置界面" class="headerlink" title="5.4 线阵相机拼接服务配置界面"></a>5.4 线阵相机拼接服务配置界面</h3><img alt="image-20250314141146084" src="https://jadehh.github.io/blog/article/20240314151809/image-20250314141146084.png"/>
+
+
+<ul>
+<li>EIO设备的ip地址，端口号，和输入输出位</li>
+<li>是否开启自动验残，开启自动验残需要配置正确的自动验残服务，如下图，选择自动验残服务，或者手动配置自动验残的ip地址和自动验残的端口号</li>
+</ul>
+<img alt="image-20250314141218333" src="https://jadehh.github.io/blog/article/20240314151809/image-20250314141218333.png"/>
+
+<ul>
+<li>等待卡口报文和拼接报文的最大匹配时间(根据拼接完成和收到卡口0x21报文的时间去做匹配，在30s以内认定为一个车次，只有匹配成功才做自动验残任务)</li>
+</ul>
+<blockquote>
+<p>其他参数均为默认无需修改。</p>
+</blockquote>
+<h3 id="5-5-验残配置文件修改"><a href="#5-5-验残配置文件修改" class="headerlink" title="5.5 验残配置文件修改"></a>5.5 验残配置文件修改</h3><p>​    编辑ipConfig文件</p>
+<img alt="image-20250314141416981" src="https://jadehh.github.io/blog/article/20240314151809/image-20250314141416981.png"/>
+
+<ul>
+<li>验残平台无法配置线阵相机的参数，所有需要在这里手动设置，各种参数信息见<a target="_blank" rel="noopener" href="https://uvonsqacl2.feishu.cn/file/TsDFb83zCoqPyVxNhCxch4uCngb">线阵相机调试文档</a></li>
+</ul>
+<h2 id="6-自动验残服务部署"><a href="#6-自动验残服务部署" class="headerlink" title="6. 自动验残服务部署"></a>6. 自动验残服务部署</h2><h3 id="6-1-自动验残服务界面"><a href="#6-1-自动验残服务界面" class="headerlink" title="6.1 自动验残服务界面"></a>6.1 自动验残服务界面</h3><p>在自动验残服务中新建通道</p>
+<img src="https://jadehh.github.io/blog/article/20240314151809/1716530930237.png" alt="1716530930237"  />
+
+<h3 id="6-2-自动验残服务配置界面"><a href="#6-2-自动验残服务配置界面" class="headerlink" title="6.2 自动验残服务配置界面"></a>6.2 自动验残服务配置界面</h3><img alt="image-20250314141812286" src="https://jadehh.github.io/blog/article/20240314151809/image-20250314141812286.png"/>
+
+<ul>
+<li>启动箱号识别，是箱号识别服务的侧面相机如果使用线阵相机的话，箱号识别服务并不支持该相机，所以只能通过线阵相机拼接服务与自动验残服务对接，将箱号识别结果返回给箱号识别服务，一旦这样的话，线阵相机拼接服务，箱号识别服务，和自动验残服务必须配置在同一台机器上。</li>
+</ul>
+<blockquote>
+<p>自动验残服务可以管多个视频拼接服务通道。</p>
+</blockquote>
+
+                
+            </div>
+            <hr/>
+
+            
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/blog/tags/%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/">
+                                    <span class="chip bg-color">项目文档</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/blog/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/blog/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/blog/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/blog/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/blog/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/blog/libs/valine/av-min.js"></script>
+<script src="/blog/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'mHuBCqi55c2fbVfnclSExp3n-gzGzoHsz',
+        appKey: 'LMInvIagUHK1LeTWJKF4x2Yw',
+        notify: 'true' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'mm',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: 'just go go'
+    });
+</script>
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/blog/article/20240109143105.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/blog/medias/featureimages/16.jpg" class="responsive-img" alt="流媒体服务Api文档">
+                        
+                        <span class="card-title">流媒体服务Api文档</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2025-03-14
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/blog/categories/%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/" class="post-category">
+                                    项目文档
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/blog/tags/%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/">
+                        <span class="chip bg-color">项目文档</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/blog/article/20240109093535.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/blog/medias/featureimages/5.jpg" class="responsive-img" alt="服务器配置清单">
+                        
+                        <span class="card-title">服务器配置清单</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2025-03-14
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/blog/categories/%E8%AE%BE%E5%A4%87%E6%96%87%E6%A1%A3/" class="post-category">
+                                    设备文档
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/blog/tags/%E8%AE%BE%E5%A4%87%E6%96%87%E6%A1%A3/">
+                        <span class="chip bg-color">设备文档</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/blog/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/blog/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/blog/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/blog/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/blog/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2024-2025</span>
+            
+            <span id="year">2024</span>
+            <a href="/blog/about" target="_blank">简得辉</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">13.6k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/jadehh" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:jadehh@live.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+
+
+
+
+    <a href="https://www.zhihu.com/people/jadehh" class="tooltipped" target="_blank" data-tooltip="关注我的知乎: https://www.zhihu.com/people/jadehh" data-position="top" data-delay="50">
+        <i class="fab fa-zhihu1">知</i>
+    </a>
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        var searchFunc = function (path, search_id, content_id) {
+            'use strict';
+            $.ajax({
+                url: path,
+                dataType: "xml",
+                success: function (xmlResponse) {
+                    // get the contents from search data
+                    var datas = $("entry", xmlResponse).map(function () {
+                        return {
+                            title: $("title", this).text(),
+                            content: $("content", this).text(),
+                            url: $("url", this).text()
+                        };
+                    }).get();
+                    var $input = document.getElementById(search_id);
+                    var $resultContent = document.getElementById(content_id);
+                    $input.addEventListener('input', function () {
+                        var str = '<ul class=\"search-result-list\">';
+                        var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                        $resultContent.innerHTML = "";
+                        if (this.value.trim().length <= 0) {
+                            return;
+                        }
+                        // perform local searching
+                        datas.forEach(function (data) {
+                            var isMatch = true;
+                            var data_title = data.title.trim().toLowerCase();
+                            var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                            var data_url = data.url;
+                            data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                            var index_title = -1;
+                            var index_content = -1;
+                            var first_occur = -1;
+                            // only match artiles with not empty titles and contents
+                            if (data_title !== '' && data_content !== '') {
+                                keywords.forEach(function (keyword, i) {
+                                    index_title = data_title.indexOf(keyword);
+                                    index_content = data_content.indexOf(keyword);
+                                    if (index_title < 0 && index_content < 0) {
+                                        isMatch = false;
+                                    } else {
+                                        if (index_content < 0) {
+                                            index_content = 0;
+                                        }
+                                        if (i === 0) {
+                                            first_occur = index_content;
+                                        }
+                                    }
+                                });
+                            }
+                            // show search results
+                            if (isMatch) {
+                                str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                                var content = data.content.trim().replace(/<[^>]+>/g, "");
+                                if (first_occur >= 0) {
+                                    // cut out 100 characters
+                                    var start = first_occur - 20;
+                                    var end = first_occur + 80;
+                                    if (start < 0) {
+                                        start = 0;
+                                    }
+                                    if (start === 0) {
+                                        end = 100;
+                                    }
+                                    if (end > content.length) {
+                                        end = content.length;
+                                    }
+                                    var match_content = content.substr(start, end);
+                                    // highlight all keywords
+                                    keywords.forEach(function (keyword) {
+                                        var regS = new RegExp(keyword, "gi");
+                                        match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                    });
+
+                                    str += "<p class=\"search-result\">" + match_content + "...</p>"
+                                }
+                                str += "</li>";
+                            }
+                        });
+                        str += "</ul>";
+                        $resultContent.innerHTML = str;
+                    });
+                }
+            });
+        };
+
+        searchFunc('/blog/search.xml', 'searchInput', 'searchResult');
+    });
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/blog/libs/materialize/materialize.min.js"></script>
+    <script src="/blog/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/blog/libs/aos/aos.js"></script>
+    <script src="/blog/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/blog/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/blog/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/blog/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/blog/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+    
+    <script type="text/javascript" size="150" alpha='0.6'
+        zIndex="-1" src="/blog/libs/background/ribbon-refresh.min.js" async="async"></script>
+    
+
+    
+
+    
+    <script src="/blog/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
