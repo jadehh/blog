@@ -28,7 +28,7 @@ jobs:
             ${{ runner.OS }}-npm-cache
       - name: Install Dependencies
         run: | 
-          npm config set registry https://registry.npmmirror.com
+          npm config set registry https://registry.npmmirror.com/
           npm cache clean --force
           npm install --verbose
       - name: Build
