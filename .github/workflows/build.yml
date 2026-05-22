@@ -27,20 +27,7 @@ jobs:
           restore-keys: |
             ${{ runner.OS }}-npm-cache
       - name: Install Dependencies
-        run: |
-          # 1. 清除可能干扰配置的环境变量（关键步骤）
-          unset NPM_CONFIG_REGISTRY || true
-  
-          # 2. 删除可能存在于项目中的 .npmrc 配置文件
-          rm -f .npmrc
-  
-          # 3. （可选但推荐）验证当前生效的 registry 配置
-          echo "当前生效的 npm registry 是:"
-          npm config get registry
-  
-          # 4. 清理缓存，然后使用官方源安装
-          npm cache clean --force
-          npm install --verbose --registry=https://registry.npmjs.org/
+        run: npm install --registry=https://registry.npmjs.org/
       - name: Build
         run: npm run build
       - name: Upload Pages artifact
